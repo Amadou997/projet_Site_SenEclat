@@ -1,7 +1,7 @@
 # Blueprint Render : API Django + base PostgreSQL (Render > New > Blueprint > ce dépôt).
 services:
   - type: web
-    name: sen-eclat-api
+    name: projet-site-seneclat
     runtime: python
     plan: free
     region: frankfurt
