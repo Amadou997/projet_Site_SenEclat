@@ -1,0 +1,296 @@
+[
+ {
+  "reference": "550/13040",
+  "old_image": "products/39d36b06d35b4efa87c022b3b6314f03.png",
+  "image": "products/photos/lot-de-12-couteaux-de-cuisine-filo.webp",
+  "name": "Lot de 12 couteaux de cuisine MAD Filo",
+  "short_description": "Lames fines en acier inoxydable pour une coupe précise, manche confortable et ergonomique."
+ },
+ {
+  "reference": "8410520055657",
+  "old_image": "products/8aa8749b9a3a4722b9d973e80319496b.png",
+  "image": "products/photos/indasec-pants-super-taille-m-x10.webp",
+  "name": "Indasec Pants Super taille M x10",
+  "short_description": "Culottes absorbantes unisexes (tour de taille 80-110 cm) : absorption maximale, contrôle des odeurs, douces et discrètes."
+ },
+ {
+  "reference": "8410520032672",
+  "old_image": "products/6c49923cbd5f4938b0d8131984821e67.png",
+  "image": "products/photos/chelino-couches-t3-x36-4-10-kg.webp",
+  "name": "Chelino couches T3 x36 (4-10 kg)",
+  "short_description": "Couches douces comme le coton : absorption maximale, protection jusqu'à 12 heures et voile respirant pour une peau saine."
+ },
+ {
+  "reference": "8410520032696",
+  "old_image": "products/4d6b83a90bcf4a739a60c92fe3468f53.png",
+  "image": "products/photos/chelino-couches-t4-x34-9-15-kg.webp",
+  "name": "Chelino couches T4 x34 (9-15 kg)",
+  "short_description": "Couches douces comme le coton : absorption maximale, protection jusqu'à 12 heures et voile respirant pour une peau saine."
+ },
+ {
+  "reference": "8004260248563",
+  "old_image": "products/b1c4d802314546a996cf396ed7e13b74.png",
+  "image": "products/photos/nicky-papier-cuisine-compact-mega.webp",
+  "name": "Nicky papier cuisine compact Mega",
+  "short_description": "Un rouleau Mega qui équivaut à 4 rouleaux classiques : ultra absorbant, résistant, multi-usages et apte au contact alimentaire."
+ },
+ {
+  "reference": "1275/23013",
+  "old_image": "products/fbddbd2c0f85414293693bca5ad9a3e9.png",
+  "image": "products/photos/flacon-parfum-caravan-cro-150-ml-n13.webp",
+  "name": "Eau de parfum Caravan N°13 femme 150 ml",
+  "short_description": "Eau de parfum pour femme aux notes chyprées florales, en vaporisateur de 150 ml."
+ },
+ {
+  "reference": "1275/23050",
+  "old_image": "products/8c50eb38fd3d4af686c7f10bdece167f.png",
+  "image": "products/photos/parfum-caravan-femme-150-ml-n50.webp",
+  "name": "Eau de parfum Caravan N°50 femme 150 ml",
+  "short_description": "Eau de parfum pour femme aux notes florales orientales, en vaporisateur de 150 ml."
+ },
+ {
+  "reference": "1275/23030",
+  "old_image": "products/645fe5c0586f4baa83c96968e1b65a83.png",
+  "image": "products/photos/parfum-caravan-femme-150-ml-n30.webp",
+  "name": "Eau de parfum Caravan N°30 femme 150 ml",
+  "short_description": "Eau de parfum pour femme aux notes florales fruitées, en vaporisateur de 150 ml."
+ },
+ {
+  "reference": "32/130137",
+  "old_image": "products/8b9ffdc474af4f8388524e371b3aefb8.png",
+  "image": "products/photos/serviettes-duplo-33x33-blanches.webp",
+  "name": "Serviettes Duplo 33x33 cm blanches x100",
+  "short_description": "100 serviettes 2 plis, douces, résistantes et très absorbantes."
+ },
+ {
+  "reference": "601/0003369",
+  "old_image": "products/48dc9a0eab9a463b80d25926f85a39f8.png",
+  "image": "products/photos/shampooing-familial-nat-cream-750-ml.webp",
+  "name": "Shampooing familial Amalfi Nat Cream 750 ml",
+  "short_description": "À l'extrait naturel de crème, pour tous types de cheveux et un usage fréquent : nettoie en douceur toute la famille et laisse les cheveux souples et brillants."
+ },
+ {
+  "reference": "601/05017",
+  "old_image": "products/06af5b096ded44a182c91e1bcf1546b6.png",
+  "image": "products/photos/shampooing-keratine-mojito-cheveux-gras-750-ml.webp",
+  "name": "Shampooing Amalfi kératine Mojito cheveux gras 750 ml",
+  "short_description": "À la kératine et aux extraits naturels : purifie et rafraîchit les cheveux gras, apporte légèreté et brillance sans alourdir."
+ },
+ {
+  "reference": "601/0003375",
+  "old_image": "products/f7ed33a0dcd64f23a44a5e37abad9969.png",
+  "image": "products/photos/eau-de-cologne-lavande-750-ml.webp",
+  "name": "Eau de Cologne Amalfi lavande 750 ml",
+  "short_description": "Parfum frais et relaxant à la lavande, fraîcheur longue durée pour toute la famille."
+ },
+ {
+  "reference": "601/0003803",
+  "old_image": "products/ad95082ceb4d4c7e9825ec5fce0c499d.png",
+  "image": "products/photos/gel-bain-rose-musquee-750-ml.webp",
+  "name": "Gel bain et douche Amalfi rose musquée 750 ml",
+  "short_description": "À l'extrait de rose musquée : hydrate et adoucit pour des peaux douces et parfumées. Pour toute la famille."
+ },
+ {
+  "reference": "601/05764",
+  "old_image": "products/75d22f521bf84a86821212296ece447c.png",
+  "image": "products/photos/savon-creme-nb-cherry-gum-500-ml.webp",
+  "name": "Savon crème Amalfi NB Cherry Gum 500 ml",
+  "short_description": "Savon crème au parfum Cherry Gum : nettoie en douceur avec une formule douce qui respecte la peau. Flacon pompe."
+ },
+ {
+  "reference": "601/0003364",
+  "old_image": "products/2844742e70174414a15a26fca2184b0a.png",
+  "image": "products/photos/shampooing-avoine-amalfi-750-ml.webp",
+  "name": "Shampooing Amalfi à l'avoine 750 ml",
+  "short_description": "À l'extrait naturel d'avoine : nourrit et renforce, pour des cheveux doux, brillants et en pleine santé."
+ },
+ {
+  "reference": "601/0003377",
+  "old_image": "products/7e5c6c67e9b44f09b1314a56d423fd9b.png",
+  "image": "products/photos/eau-de-cologne-royale-amalfi-750-ml.webp",
+  "name": "Eau de Cologne Royale Amalfi 750 ml",
+  "short_description": "Senteurs royales aux notes florales : fraîcheur et élégance, parfum frais longue durée."
+ },
+ {
+  "reference": "601/05772",
+  "old_image": "products/da14d93fd19e47d68f03173091e2f1c7.png",
+  "image": "products/photos/savon-creme-nb-kids-amalfi-500-ml.webp",
+  "name": "Savon crème Amalfi NB Kids 500 ml",
+  "short_description": "À l'extrait de camomille, spécial peaux sensibles : nettoie en douceur et respecte la peau des enfants. Flacon pompe."
+ },
+ {
+  "reference": "601/0003353",
+  "old_image": "products/a6ce7d71564a4adcb8c8ce8df9b49c51.png",
+  "image": "products/photos/gel-douche-doux-roses-750-ml.webp",
+  "name": "Gel douche doux Amalfi roses 750 ml",
+  "short_description": "À l'extrait de rose : hydrate et adoucit pour des peaux douces et parfumées. Pour toute la famille."
+ },
+ {
+  "reference": "601/0003273",
+  "old_image": "products/ba7ec20dae1a48feb4b6ac5b3c6dbc30.png",
+  "image": "products/photos/gel-douche-creme-750-ml.webp",
+  "name": "Gel bain et douche Amalfi crème 750 ml",
+  "short_description": "À l'extrait de lait : nourrit et adoucit pour des peaux douces et hydratées. Pour toute la famille."
+ },
+ {
+  "reference": "601/0004067",
+  "old_image": "products/cf526d9a02d54a408cde66633da3777b.png",
+  "image": "products/photos/gel-douche-vanille-750-ml.webp",
+  "name": "Gel bain et douche Amalfi Dermo Care vanille 750 ml",
+  "short_description": "Hydratation naturelle au parfum de vanille, pour une peau douce et parfumée."
+ },
+ {
+  "reference": "601/05992",
+  "old_image": "products/19615d7b3dfc4f349c40e75a63883fa6.png",
+  "image": "products/photos/masque-capillaire-revitalisant-500-ml.webp",
+  "name": "Masque capillaire revitalisant Amalfi 500 ml",
+  "short_description": "Nutrition intense à l'huile d'argan et à la kératine : répare, nourrit et protège tous types de cheveux, plus forts, souples et brillants."
+ },
+ {
+  "reference": "601/0003774",
+  "old_image": "products/d2195e5b4c0640a99950b0838cb1c0cd.png",
+  "image": "products/photos/creme-douce-cheveux-normaux-1000-ml.webp",
+  "name": "Crème capillaire Suav cheveux normaux 1000 ml",
+  "short_description": "À la protéine de lait : hydrate, adoucit et protège les cheveux normaux."
+ },
+ {
+  "reference": "601/0003773",
+  "old_image": "products/4cfcd445eed64c368147a8d3ba30256c.png",
+  "image": "products/photos/creme-adoucissante-professional-1000-ml.webp",
+  "name": "Crème adoucissante Professio 3ACC 1000 ml",
+  "short_description": "Soin capillaire enrichi en karité, huile de coco et huile d'argan : nourrit, assouplit et fait briller."
+ },
+ {
+  "reference": "601/0004410",
+  "old_image": "products/ee8d09f10011445eb289af287b2577df.png",
+  "image": "products/photos/creme-douce-a-la-keratine-1000-ml.webp",
+  "name": "Crème douceur Suav à la kératine 1000 ml",
+  "short_description": "Soin capillaire à la kératine : répare et renforce, nourrit en profondeur, apporte brillance et douceur."
+ },
+ {
+  "reference": "601/0004363",
+  "old_image": "products/ddc6496f6b20408c99c6bb0d5704f025.png",
+  "image": "products/photos/deodorant-roll-on-aloe-vera-50-ml.webp",
+  "name": "Déodorant roll-on Amalfi aloe vera 50 ml",
+  "short_description": "Anti-transpirant 48 h sans alcool, à l'aloe vera : soin des peaux sensibles et fraîcheur naturelle."
+ },
+ {
+  "reference": "601/05773",
+  "old_image": "products/b33521b8912140669e2e7d90056eee8a.png",
+  "image": "products/photos/savon-creme-nb-olive-amalfi-500-ml.webp",
+  "name": "Savon crème Amalfi NB olive 500 ml",
+  "short_description": "À l'huile d'olive : nettoie en douceur avec une formule douce qui respecte la peau. Flacon pompe."
+ },
+ {
+  "reference": "601/0003287",
+  "old_image": "products/f0378548299c46f7a9cf418909737af5.png",
+  "image": "products/photos/shampooing-familial-peche-750-ml.webp",
+  "name": "Shampooing familial Amalfi pêche 750 ml",
+  "short_description": "À l'extrait de pêche, pour tous types de cheveux et un usage fréquent : nettoie en douceur toute la famille et laisse les cheveux souples et brillants."
+ },
+ {
+  "reference": "601/0004411",
+  "old_image": "products/1a2003fc969942178426434e901af8bc.png",
+  "image": "products/photos/shampooing-keratine-anti-frisottis-750-ml.webp",
+  "name": "Shampooing Amalfi kératine anti-frisottis 750 ml",
+  "short_description": "Nutrition intense à la kératine : discipline et lisse les cheveux rebelles, pour des cheveux doux, brillants et sans frisottis."
+ },
+ {
+  "reference": "601/0003449",
+  "old_image": "products/72b54e24c21f4fbc8adff1c72ca06a69.png",
+  "image": "products/photos/bain-de-bouche-classique-500-ml.webp",
+  "name": "Bain de bouche classique 500 ml",
+  "short_description": "Goût menthe fraîche : rafraîchit l'haleine, aide à prévenir la plaque dentaire et protège gencives et dents."
+ },
+ {
+  "reference": "601/0003378",
+  "old_image": "products/6648083a2e8d410e91b67e39f862a49a.png",
+  "image": "products/photos/eau-de-cologne-enfants-750-ml.webp",
+  "name": "Eau de Cologne Amalfi Kids enfants 750 ml",
+  "short_description": "Parfum doux et frais pour enfants, testé dermatologiquement : fraîcheur et bien-être au quotidien."
+ },
+ {
+  "reference": "601/0004362",
+  "old_image": "products/f0e48ffd134e4e7697cca2dd9240afe2.png",
+  "image": "products/photos/deodorant-roll-on-rose-musquee-50-ml.webp",
+  "name": "Déodorant roll-on Amalfi rose musquée 50 ml",
+  "short_description": "Anti-transpirant 48 h sans alcool, au parfum délicat de rose musquée, pour peaux sensibles."
+ },
+ {
+  "reference": "601/0004361",
+  "old_image": "products/21787fe5047745daacb4288a71ce240d.png",
+  "image": "products/photos/deodorant-roll-on-dermo-protect-50-ml.webp",
+  "name": "Déodorant roll-on Amalfi Dermo Protect 50 ml",
+  "short_description": "Anti-transpirant 48 h sans alcool : soin des peaux sensibles et fraîcheur longue durée tout au long de la journée."
+ },
+ {
+  "reference": "601/0006198",
+  "old_image": "products/06d114b09321484997216d4dc1364b92.png",
+  "image": "products/photos/deodorant-roll-on-homme-nb-50-ml.webp",
+  "name": "Déodorant roll-on Amalfi NB Men 50 ml",
+  "short_description": "Anti-transpirant 48 h pour homme : anti-odeurs, séchage rapide et fraîcheur intense longue durée."
+ },
+ {
+  "reference": "601/0003376",
+  "old_image": "products/2c564c32ee2c41c480b01f0be0c39915.png",
+  "image": "products/photos/eau-de-cologne-limones-caribe-750-ml.webp",
+  "name": "Eau de Cologne Amalfi Limones Caribe 750 ml",
+  "short_description": "Parfum frais et vivifiant aux senteurs exotiques des Caraïbes, pour une fraîcheur naturelle."
+ },
+ {
+  "reference": "550/11012",
+  "old_image": "products/843e1bb9184f49d8aab3df5dc768cad1.png",
+  "image": "products/photos/lot-de-24-couteaux-a-steak-micro-dentes.webp",
+  "name": "Lot de 24 couteaux à steak micro-dentés MAD",
+  "short_description": "Lame micro-dentée en acier inoxydable et manche imitation bois, résistants et durables : idéals pour les viandes."
+ },
+ {
+  "reference": "550/10071",
+  "old_image": "products/88665c09d3f64ff9a9eaf9b232c3af9f.png",
+  "image": "products/photos/lot-de-24-couteaux-de-cuisine-11-cm-sierra-nacar.webp",
+  "name": "Lot de 24 couteaux de cuisine C.Cocin 11 cm Sierra Nacar",
+  "short_description": "Lame Sierra en acier inoxydable au tranchant durable, manche nacré élégant."
+ },
+ {
+  "reference": "8006540592069",
+  "old_image": "products/f9aab3cc3b8a4e9499f0c514b02c4a3f.png",
+  "image": "products/photos/dodot-etapes-t5-x152.webp",
+  "name": "Dodot Étapes T5 x152 (13-18 kg)",
+  "short_description": "Pack économique : canaux d'absorption ultra secs, douceur du coton, ajustement total et jusqu'à 12 h de protection."
+ },
+ {
+  "reference": "468/8216RL-AZU",
+  "old_image": "products/2b10fb27061047aab351565407039fbe.png",
+  "image": "products/photos/seau-essoreur-fresh-16-l.webp",
+  "name": "Seau + essoreur Fresh 16 L",
+  "short_description": "Seau avec essoreur de grande capacité, résistant, en plastique recyclé."
+ },
+ {
+  "reference": "468/8214L-AZU",
+  "old_image": "products/feead71be78c4976975156aca0cebf85.png",
+  "image": "products/photos/seau-essoreur-fresh-14-l-bleu.webp",
+  "name": "Seau + essoreur Fresh 14 L bleu",
+  "short_description": "Seau avec essoreur de grande capacité, résistant, en plastique recyclé. Coloris bleu."
+ },
+ {
+  "reference": "375/13921",
+  "old_image": "products/2fb985ec0b5042948f1153041bb0905f.png",
+  "image": "products/photos/seau-a-balai-star-rectangulaire-135-l.webp",
+  "name": "Seau à balai Star rectangulaire 13,5 L",
+  "short_description": "Seau avec essoreur pour balai à franges, contenance 13,5 L."
+ },
+ {
+  "reference": "601/0003357",
+  "old_image": "products/fe247ad631274d73b619411252b54b51.png",
+  "image": "products/photos/gel-douche-avoine-amalfi-750-ml.webp",
+  "name": "Gel bain et douche Amalfi Dermo Care avoine 750 ml",
+  "short_description": "Hydratant à l'avoine : douceur naturelle pour une peau douce et soignée."
+ },
+ {
+  "reference": "601/0005918",
+  "old_image": "products/8bdc9e459b0a4745922f81894a8d76e5.png",
+  "image": "products/photos/shampooing-a-largan-750-ml.webp",
+  "name": "Shampooing Amalfi à l'argan 750 ml",
+  "short_description": "Nutrition et brillance pour cheveux secs et abîmés : nourrit, répare et sublime vos cheveux."
+ }
+]
