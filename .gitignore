@@ -8,3 +8,6 @@
 # Système
 .DS_Store
 Thumbs.db
+
+# Liaison locale Netlify
+.netlify/
