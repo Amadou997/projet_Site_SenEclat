@@ -1,0 +1,10 @@
+# Bases de données locales et sauvegardes
+*.sqlite3
+*.sqlite3.*
+
+# Configuration locale Claude Code
+.claude/
+
+# Système
+.DS_Store
+Thumbs.db

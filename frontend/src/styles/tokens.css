@@ -1,0 +1,73 @@
+/* Sen Éclat — Système de design v1 (palette issue du logo officiel, WCAG AA) */
+:root {
+  /* Couleurs */
+  --ebene: #1d1a19;
+  --ebene-2: #2a2523;
+  --ebene-line: #3a3230;
+  --ebene-border: #4a403c;
+  --prune: #3f142d;
+  --prune-nuit: #2e0e21;
+  --prune-soft: #f6eef2;
+  --or: #c9a24a;
+  --or-lumiere: #e3ba65;
+  --or-profond: #8a6420;
+  --creme: #ead7a4;
+  --ivoire: #faf6ee;
+  --sable: #f1e9da;
+  --sable-2: #efe7d9;
+  --lin: #e4d9c6;
+  --lin-fort: #cfc2ac;
+  --taupe: #5e5450;
+  --texte-2: #3a3230;
+  --vert: #1f6b45;
+  --vert-fonce: #1a4d33;
+  --vert-soft: #eaf2ec;
+  --vert-border: #b9d3c1;
+  --ambre: #b07a1a;
+  --ambre-fonce: #6b4a10;
+  --ambre-soft: #fbf1dc;
+  --rouge: #a3282a;
+  --rouge-fonce: #8a1f21;
+  --rouge-soft: #f7e6e6;
+  --blanc: #ffffff;
+
+  /* Typographie */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', 'Avenir Next', system-ui, sans-serif;
+
+  /* Grille & espacements (échelle 4) */
+  --container: 1280px;
+  --gutter: 32px;
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s8: 32px;
+  --s10: 40px;
+  --s14: 56px;
+  --s18: 72px;
+  --s24: 96px;
+
+  /* Formes */
+  --r-btn: 2px;
+  --r-card: 4px;
+  --tap: 44px;
+
+  /* Mouvement */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur: 220ms;
+  --dur-slow: 480ms;
+
+  --shadow-card: 0 1px 2px rgba(29, 26, 25, 0.06), 0 8px 24px -12px rgba(29, 26, 25, 0.18);
+  --shadow-lift: 0 2px 4px rgba(29, 26, 25, 0.06), 0 24px 48px -20px rgba(63, 20, 45, 0.35);
+}
+
+@media (max-width: 860px) {
+  :root {
+    --gutter: 16px;
+  }
+}
