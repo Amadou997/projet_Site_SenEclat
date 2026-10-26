@@ -1,0 +1,43 @@
+# Blueprint Render : API Django + base PostgreSQL (Render > New > Blueprint > ce dépôt).
+services:
+  - type: web
+    name: sen-eclat-api
+    runtime: python
+    plan: free
+    region: frankfurt
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
+    # Le plan gratuit n'a pas de « pre-deploy » : migrations et catalogue initial au démarrage.
+    startCommand: python manage.py migrate --noinput && python manage.py bootstrap_prod && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 60
+    envVars:
+      - key: DJANGO_DEBUG
+        value: "false"
+      # Clé d'au moins 50 caractères, demandée à la création du Blueprint.
+      - key: DJANGO_SECRET_KEY
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      # Le site Netlify relaie /api et /media : le navigateur reste sur l'origine Netlify.
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: DB_ENGINE
+        value: django.db.backends.postgresql
+      - key: DB_NAME
+        fromDatabase: { name: sen-eclat-db, property: database }
+      - key: DB_USER
+        fromDatabase: { name: sen-eclat-db, property: user }
+      - key: DB_PASSWORD
+        fromDatabase: { name: sen-eclat-db, property: password }
+      - key: DB_HOST
+        fromDatabase: { name: sen-eclat-db, property: host }
+      - key: DB_PORT
+        fromDatabase: { name: sen-eclat-db, property: port }
+
+databases:
+  - name: sen-eclat-db
+    plan: free
+    region: frankfurt
+    databaseName: sen_eclat
+    user: sen_eclat

@@ -6,3 +6,7 @@ django-filter>=25.1
 argon2-cffi>=23.1
 python-dotenv>=1.0
 Pillow>=11.0
+# Production (Render)
+gunicorn>=23.0
+whitenoise>=6.9
+psycopg[binary]>=3.2
