@@ -292,5 +292,173 @@
   "image": "products/photos/shampooing-a-largan-750-ml.webp",
   "name": "Shampooing Amalfi à l'argan 750 ml",
   "short_description": "Nutrition et brillance pour cheveux secs et abîmés : nourrit, répare et sublime vos cheveux."
+ },
+ {
+  "reference": "3384123162157",
+  "old_image": "products/b0c44459b4604d93a3f32abd72ca3feb.png",
+  "image": "products/photos/spontex-salvauna-antibact-2-1.webp",
+  "name": "Éponges grattoir antibactériennes Spontex Salvauña 2+1",
+  "short_description": "Lot de 3 éponges antibactériennes : éliminent 99,9 % des bactéries, sans rayures, durables, efficaces sur les surfaces délicates."
+ },
+ {
+  "reference": "861/80",
+  "old_image": "products/02a92358939c4e21868e34d83fc5a898.png",
+  "image": "products/photos/salvaunas-noir-x3.webp",
+  "name": "Éponges grattoir noires Salvauñas x3",
+  "short_description": "3 éponges grattoirs noires pour la vaisselle (3 x 30 g) : grattage puissant, sans rayures, séchage rapide."
+ },
+ {
+  "reference": "861/28",
+  "old_image": "products/bd9a60a4d60f424ab09d73e113409697.png",
+  "image": "products/photos/eponges-rectangulaires-x3.webp",
+  "name": "Éponges rectangulaires x3",
+  "short_description": "Pour récurer et nettoyer efficacement la vaisselle et les surfaces."
+ },
+ {
+  "reference": "2020/1454-010-06",
+  "old_image": "products/843bb49abbd647e5bb9fe22d208582a4.png",
+  "image": "products/photos/fonds-fibre-verte-x6.webp",
+  "name": "Tampons fibre verte x6 9,5x15 cm",
+  "short_description": "Lot de 6 tampons extra durables et grand format, idéals pour poêles, casseroles et barbecues."
+ },
+ {
+  "reference": "861/36",
+  "old_image": "products/7a10cb4f68764debbccb9c95de1fabe8.png",
+  "image": "products/photos/eponges-mimon-x3.webp",
+  "name": "Éponges Mimon x3",
+  "short_description": "Éponges double face extra durables et ergonomiques, sans rayures, pour casseroles et plans de travail."
+ },
+ {
+  "reference": "2020/2345-153",
+  "old_image": "products/33d422beae864d4e9d6c45c99e35f4ea.png",
+  "image": "products/photos/eponges-metalliques-2x15g.webp",
+  "name": "Éponges métalliques 2x15 g",
+  "short_description": "Lot de 2 éponges sans rayures et durables, idéales pour poêles, casseroles et barbecue."
+ },
+ {
+  "reference": "861/340",
+  "old_image": "products/68327d2958674bd7b3b4ff3a50fca772.png",
+  "image": "products/photos/eponges-minislim-x2.webp",
+  "name": "Éponges Minislim multicolores x2",
+  "short_description": "Pour récurer et nettoyer efficacement la vaisselle et les surfaces."
+ },
+ {
+  "reference": "8718951111035",
+  "old_image": "products/c635644ca567418d86eebce4f0ad9b45.png",
+  "image": "products/photos/colgate-premier-extra-clean-x4.webp",
+  "name": "Brosses à dents Colgate Premier Extra Clean x4",
+  "short_description": "Pack de 4 brosses à dents aux poils de nettoyage en profondeur, pour des dents extra propres."
+ },
+ {
+  "reference": "3002/224",
+  "old_image": "products/94410be8f18b4a53bb5fdec39b74df22.png",
+  "image": "products/photos/balai-roberta.webp",
+  "name": "Balai Roberta",
+  "short_description": "Accessoire de ménage robuste pour un entretien facile de la maison."
+ },
+ {
+  "reference": "111/01782",
+  "old_image": "products/05276c0f0f34491b933694fe37d86901.png",
+  "image": "products/photos/spirales-citronnelle-x40.webp",
+  "name": "Spirales anti-moustiques citronnelle x40",
+  "short_description": "40 spirales + 2 supports métalliques : protection jusqu'à 8 h par spirale, idéal pour terrasses et jardins."
+ },
+ {
+  "reference": "2020/2670-853",
+  "old_image": "products/34bc2316ed3b43919d1ce576a9ad1a8b.png",
+  "image": "products/photos/eponge-vaisselle-double-face.webp",
+  "name": "Éponge vaisselle 26,5x10 cm",
+  "short_description": "Pour récurer et nettoyer efficacement la vaisselle et les surfaces."
+ },
+ {
+  "reference": "8714789698922",
+  "old_image": "products/72fc181ac72741f0ac0d40e6b760cd81.png",
+  "image": "products/photos/palmolive-savon-olive-3x90g.webp",
+  "name": "Palmolive savon olive 3x90 g",
+  "short_description": "Pains de savon enrichis à l'huile d'olive vierge extra, pour une peau douce et lisse. 3 x 90 g."
+ },
+ {
+  "reference": "8720181481239",
+  "old_image": "products/d6e69c71642d40a7a9591debbdc2e354.png",
+  "image": "products/photos/dove-savon-toilette-2x90g.webp",
+  "name": "Dove savon de toilette 2x90 g",
+  "short_description": "Savon de toilette Fragrance originale au parfum floral-oriental, pour un nettoyage doux. 2 x 90 g."
+ },
+ {
+  "reference": "8008970053455",
+  "old_image": "products/b867aa08e5024ef2aa7f95826cc3df7d.png",
+  "image": "products/photos/savon-miel-argan-2x100g.webp",
+  "name": "Savon au miel naturel argan 2x100 g",
+  "short_description": "Savon au miel naturel avec huile d'argan, fabriqué à la main. 2 x 100 g."
+ },
+ {
+  "reference": "8410225556237",
+  "old_image": "products/e1e8546f980c474898bf7b929ca8d889.png",
+  "image": "products/photos/heno-de-pravia-savon-2x115g.webp",
+  "name": "Heno de Pravia savon 2x115 g",
+  "short_description": "Le savon original Heno de Pravia et son parfum floral. 2 pains de 115 g."
+ },
+ {
+  "reference": "2020/414-512",
+  "old_image": "products/c383413003924f2a86e92eab01c3fe3b.png",
+  "image": "products/photos/semelles-eva-ergonomiques.webp",
+  "name": "Semelles ergonomiques EVA 36-46",
+  "short_description": "Semelles ergonomiques en mousse EVA : soutien plantaire, confort et amorti, matériau léger et respirant."
+ },
+ {
+  "reference": "8714789924823",
+  "old_image": "products/034cf9ad7bc8453e98ca985a6b89e1bc.png",
+  "image": "products/photos/palmolive-savon-mains-amande.webp",
+  "name": "Palmolive savon pour les mains amande 300 ml",
+  "short_description": "Savon liquide à formule réconfortante, pour une peau douce. Flacon pompe 300 ml."
+ },
+ {
+  "reference": "601/0003424",
+  "old_image": "products/5fc8582b15d7417a97663a81ca67ad0a.png",
+  "image": "products/photos/creme-douce-cheveux-normaux-750ml.webp",
+  "name": "Crème douce cheveux normaux 750 ml",
+  "short_description": "Soin capillaire pour un démêlage et une douceur au quotidien. Format : 750 ml."
+ },
+ {
+  "reference": "601/0003181",
+  "old_image": "products/cd02c73f570e484983a83536da939471.png",
+  "image": "products/photos/shampooing-familial-amalfi-1250ml.webp",
+  "name": "Shampooing familial Amalfi 1250 ml",
+  "short_description": "Convient à toute la famille : nourrissant et doux, pour cheveux normaux et secs. Format : 1250 ml."
+ },
+ {
+  "reference": "601/0003373",
+  "old_image": "products/b18f629b67a64d909720c418bcb6618e.png",
+  "image": "products/photos/lait-corporel-aloe-vera-500ml.webp",
+  "name": "Lait corporel aloe vera Amalfi 500 ml",
+  "short_description": "Lotion corporelle à l'extrait d'aloe vera, hydratation douce pour peaux sensibles. Format : 500 ml."
+ },
+ {
+  "reference": "601/0003307",
+  "old_image": "products/032243afc8b24bc6aeb73eb319015b7d.png",
+  "image": "products/photos/lait-corporel-rose-musquee-500ml.webp",
+  "name": "Lait corporel rose musquée 500 ml",
+  "short_description": "Lait corps à la rose musquée et à l'huile d'avoine colloïdale, hydratant doux. Flacon pompe 500 ml."
+ },
+ {
+  "reference": "601/0003308",
+  "old_image": "products/8cc612722d7245db96c08046a11c4875.png",
+  "image": "products/photos/lait-corporel-olive-500ml.webp",
+  "name": "Lait corporel à l'olive 500 ml",
+  "short_description": "Hydratation intense pour peaux sèches, à l'huile d'olive vierge. Format : 500 ml."
+ },
+ {
+  "reference": "601/0005984",
+  "old_image": "products/4cb7b74574a04b01a2cf96f706ee5d99.png",
+  "image": "products/photos/lotion-corporelle-enfants-750ml.webp",
+  "name": "Lotion corporelle enfants 750 ml",
+  "short_description": "Soin hydratant pour une peau douce et nourrie toute la journée. Format : 750 ml."
+ },
+ {
+  "reference": "4000388177000",
+  "old_image": "products/cddc485a34974d12a79e702cdb9bfd29.png",
+  "image": "products/photos/dove-savon-liquide-original-250ml.webp",
+  "name": "Dove savon liquide Original 250 ml",
+  "short_description": "Savon liquide pour les mains avec ¼ de crème hydratante. Flacon pompe 250 ml."
  }
 ]
