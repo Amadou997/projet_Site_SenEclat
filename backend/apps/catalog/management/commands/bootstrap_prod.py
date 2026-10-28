@@ -5,6 +5,8 @@ encore aucun produit, pour ne jamais écraser les modifications faites dans le b
 Les photos officielles (`fixtures/photos_produits.json`) remplacent les visuels provisoires,
 avec le nom et l'accroche lus sur l'emballage, uniquement pour les produits qui ont encore
 leur visuel d'origine : une photo changée depuis le back-office n'est jamais écrasée.
+Les produits ajoutés après le chargement initial (`fixtures/produits_ajoutes.json`) sont créés
+s'ils n'existent pas encore (même référence ou même slug), sans jamais toucher à l'existant.
 Le compte administrateur n'est créé que si ADMIN_EMAIL et ADMIN_PASSWORD sont définis et
 qu'aucun compte n'existe déjà avec cet e-mail.
 """
@@ -15,6 +17,7 @@ import os
 from django.conf import settings
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
+from django.db.models import Q
 
 from apps.accounts.models import User
 from apps.catalog.models import Product
@@ -30,6 +33,7 @@ class Command(BaseCommand):
             call_command("loaddata", str(settings.BASE_DIR / "fixtures" / "catalogue.json"))
             self.stdout.write(self.style.SUCCESS("Catalogue initial chargé."))
 
+        self.add_products()
         self.apply_photos()
 
         email = os.environ.get("ADMIN_EMAIL", "").strip()
@@ -41,6 +45,16 @@ class Command(BaseCommand):
         else:
             User.objects.create_superuser(email=email, password=password, first_name="Admin", last_name="Sen Éclat")
             self.stdout.write(self.style.SUCCESS(f"Administrateur {email} créé."))
+
+    def add_products(self):
+        path = settings.BASE_DIR / "fixtures" / "produits_ajoutes.json"
+        created = 0
+        for entry in json.loads(path.read_text(encoding="utf-8")):
+            if Product.objects.filter(Q(reference=entry["reference"]) | Q(slug=entry["slug"])).exists():
+                continue
+            Product.objects.create(**entry)
+            created += 1
+        self.stdout.write(f"Produits ajoutés : {created}.")
 
     def apply_photos(self):
         path = settings.BASE_DIR / "fixtures" / "photos_produits.json"

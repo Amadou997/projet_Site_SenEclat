@@ -142,3 +142,17 @@ def test_contact_message_and_security_headers(api):
     assert response.status_code == 201
     assert response["X-Content-Type-Options"] == "nosniff"
     assert response["X-Frame-Options"] == "DENY"
+
+
+def test_bootstrap_adds_new_products_once(db):
+    from django.core.management import call_command
+
+    from apps.catalog.models import Product
+
+    Product.objects.create(slug="deja-la", name="Déjà là", category="nettoyage", reference="X1", short_description="x")
+    call_command("bootstrap_prod")
+    added = Product.objects.get(reference="654/24259E-GRIS")
+    assert added.name == "Paillasson Living Geo 40x60 gris"
+    assert added.image.name == "products/photos/paillasson-living-geo-gris-40x60.webp"
+    call_command("bootstrap_prod")
+    assert Product.objects.filter(reference="654/24259E-GRIS").count() == 1
