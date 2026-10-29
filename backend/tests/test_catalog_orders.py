@@ -156,3 +156,13 @@ def test_bootstrap_adds_new_products_once(db):
     assert added.image.name == "products/photos/paillasson-living-geo-gris-40x60.webp"
     call_command("bootstrap_prod")
     assert Product.objects.filter(reference="654/24259E-GRIS").count() == 1
+
+
+def test_prune_keeps_only_products_with_official_photo(db):
+    from apps.catalog.models import Product
+    from apps.catalog.pruning import prune_catalogue
+
+    Product.objects.create(slug="sans-photo", name="Sans photo", category="nettoyage", reference="X1", short_description="x")
+    Product.objects.create(slug="avec-photo", name="Avec photo", category="nettoyage", reference="1115/UP225", short_description="x")
+    assert prune_catalogue(Product) == 1
+    assert list(Product.objects.values_list("reference", flat=True)) == ["1115/UP225"]

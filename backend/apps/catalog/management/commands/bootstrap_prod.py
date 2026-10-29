@@ -1,7 +1,8 @@
 """Initialisation de la production : `python manage.py bootstrap_prod` (lancé à chaque démarrage).
 
 Idempotent : le catalogue (`fixtures/catalogue.json`) n'est chargé que si la base ne contient
-encore aucun produit, pour ne jamais écraser les modifications faites dans le back-office.
+encore aucun produit, réduit aux produits qui ont une photo officielle (migration
+catalog 0003 pour une base déjà remplie), pour ne jamais écraser les modifications faites dans le back-office.
 Les photos officielles (`fixtures/photos_produits.json`) remplacent les visuels provisoires,
 avec le nom et l'accroche lus sur l'emballage, uniquement pour les produits qui ont encore
 leur visuel d'origine : une photo changée depuis le back-office n'est jamais écrasée.
@@ -21,6 +22,7 @@ from django.db.models import Q
 
 from apps.accounts.models import User
 from apps.catalog.models import Product
+from apps.catalog.pruning import prune_catalogue
 
 
 class Command(BaseCommand):
@@ -31,7 +33,8 @@ class Command(BaseCommand):
             self.stdout.write("Catalogue déjà présent : chargement ignoré.")
         else:
             call_command("loaddata", str(settings.BASE_DIR / "fixtures" / "catalogue.json"))
-            self.stdout.write(self.style.SUCCESS("Catalogue initial chargé."))
+            pruned = prune_catalogue(Product)
+            self.stdout.write(self.style.SUCCESS(f"Catalogue initial chargé ({pruned} produits sans photo écartés)."))
 
         self.add_products()
         self.apply_photos()
