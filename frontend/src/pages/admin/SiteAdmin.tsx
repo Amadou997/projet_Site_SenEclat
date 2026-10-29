@@ -107,6 +107,127 @@ export function Settings() {
 }
 
 /* ------------------------------------------------------------------ */
+/* Statistiques d'audience (Google Analytics 4, Microsoft Clarity)     */
+/* ------------------------------------------------------------------ */
+
+function AnalyticsForm({ initial }: { initial: SiteSettings }) {
+  const [form, setForm] = useState({ ga4_measurement_id: initial.ga4_measurement_id, clarity_project_id: initial.clarity_project_id })
+  const [saved, setSaved] = useState(form)
+  const [flash, setFlash] = useFlash()
+  const [error, setError] = useState<string | null>(null)
+  const [pending, setPending] = useState(false)
+
+  async function save(event: FormEvent) {
+    event.preventDefault()
+    setError(null)
+    setPending(true)
+    try {
+      const result = await api.patch<SiteSettings>('/admin/settings/', form)
+      const next = { ga4_measurement_id: result.ga4_measurement_id, clarity_project_id: result.clarity_project_id }
+      setForm(next)
+      setSaved(next)
+      setFlash('Identifiants enregistrés. La mesure démarre à la prochaine visite de la boutique.')
+    } catch (err) {
+      setError(errorMessage(err, 'Enregistrement impossible.'))
+    } finally {
+      setPending(false)
+    }
+  }
+
+  const tools = [
+    {
+      name: 'Google Analytics 4',
+      active: Boolean(saved.ga4_measurement_id),
+      text: 'Visiteurs, pages vues, provenance du trafic, ajouts au panier et ventes (en FCFA).',
+      href: 'https://analytics.google.com/analytics/web/',
+      cta: 'Ouvrir Google Analytics',
+    },
+    {
+      name: 'Microsoft Clarity',
+      active: Boolean(saved.clarity_project_id),
+      text: 'Cartes de chaleur et enregistrements de sessions pour voir comment les clients naviguent.',
+      href: saved.clarity_project_id
+        ? `https://clarity.microsoft.com/projects/view/${saved.clarity_project_id}/dashboard`
+        : 'https://clarity.microsoft.com/',
+      cta: 'Ouvrir Clarity',
+    },
+  ]
+
+  return (
+    <>
+      <div className="grid-2">
+        {tools.map((tool) => (
+          <div key={tool.name} className="admin-card admin-form">
+            <div className="admin-message__head">
+              <span className="table__strong">{tool.name}</span>
+              <span className={`status ${tool.active ? 'status--ok' : 'status--out'}`}>{tool.active ? 'Actif' : 'Non configuré'}</span>
+            </div>
+            <p className="muted">{tool.text}</p>
+            <div>
+              <a className="btn btn--outline btn--sm" href={tool.href} target="_blank" rel="noopener noreferrer">
+                {tool.cta}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <form className="admin-card admin-form" onSubmit={save}>
+        <div className="grid-2">
+          <label className="field">
+            <span>
+              ID de mesure GA4 <span className="field__hint">(Admin › Flux de données › Web)</span>
+            </span>
+            <input
+              className="input"
+              placeholder="G-XXXXXXXXXX"
+              maxLength={20}
+              value={form.ga4_measurement_id}
+              onChange={(e) => setForm({ ...form, ga4_measurement_id: e.target.value })}
+            />
+          </label>
+          <label className="field">
+            <span>
+              ID de projet Clarity <span className="field__hint">(Paramètres › Présentation)</span>
+            </span>
+            <input
+              className="input"
+              placeholder="abcd1234ef"
+              maxLength={20}
+              value={form.clarity_project_id}
+              onChange={(e) => setForm({ ...form, clarity_project_id: e.target.value })}
+            />
+          </label>
+        </div>
+        <p className="muted admin-small">
+          Laissez un champ vide pour désactiver l’outil. Les pages d’administration ne sont jamais mesurées.
+        </p>
+        {flash && (
+          <p role="status" className="alert alert--success">
+            {flash}
+          </p>
+        )}
+        {error && (
+          <p role="alert" className="alert alert--error">
+            {error}
+          </p>
+        )}
+        <div>
+          <button type="submit" className="btn btn--primary" disabled={pending}>
+            {pending ? 'Enregistrement…' : 'Enregistrer'}
+          </button>
+        </div>
+      </form>
+    </>
+  )
+}
+
+export function Analytics() {
+  const { data, loading, error, reload } = useAsync(() => api.get<SiteSettings>('/admin/settings/'), [])
+  return data ? <AnalyticsForm initial={data} /> : <LoadState loading={loading} error={error} onRetry={reload} />
+}
+
+/* ------------------------------------------------------------------ */
 /* Codes promo                                                         */
 /* ------------------------------------------------------------------ */
 

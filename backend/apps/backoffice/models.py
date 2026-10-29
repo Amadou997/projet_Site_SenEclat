@@ -20,6 +20,9 @@ class SiteSettings(models.Model):
     delivery_zones = models.JSONField("communes desservies", default=_default_zones)
     fcfa_per_loyalty_point = models.PositiveIntegerField("FCFA par point fidélité")
     announcements = models.JSONField("bandeau d'annonces", default=_default_announcements, blank=True)
+    # Outils de mesure d'audience : chargés par le front sur les pages publiques si renseignés.
+    ga4_measurement_id = models.CharField("ID de mesure Google Analytics 4", max_length=20, blank=True)
+    clarity_project_id = models.CharField("ID de projet Microsoft Clarity", max_length=20, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:

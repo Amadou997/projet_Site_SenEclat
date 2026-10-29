@@ -1,3 +1,5 @@
+import re
+
 from django.db import transaction
 from django.utils.text import slugify
 from rest_framework import serializers
@@ -237,8 +239,28 @@ class SiteSettingsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SiteSettings
-        fields = ["delivery_fee_dakar", "delivery_zones", "fcfa_per_loyalty_point", "announcements", "updated_at"]
+        fields = [
+            "delivery_fee_dakar",
+            "delivery_zones",
+            "fcfa_per_loyalty_point",
+            "announcements",
+            "ga4_measurement_id",
+            "clarity_project_id",
+            "updated_at",
+        ]
         read_only_fields = ["updated_at"]
+
+    def validate_ga4_measurement_id(self, value):
+        value = value.strip().upper()
+        if value and not re.fullmatch(r"G-[A-Z0-9]{4,16}", value):
+            raise serializers.ValidationError("Format attendu : G-XXXXXXXXXX (Admin GA4 › Flux de données).")
+        return value
+
+    def validate_clarity_project_id(self, value):
+        value = value.strip().lower()
+        if value and not re.fullmatch(r"[a-z0-9]{6,16}", value):
+            raise serializers.ValidationError("Format attendu : 10 lettres/chiffres (Clarity › Paramètres › Présentation).")
+        return value
 
     def validate_delivery_zones(self, value):
         value = _clean_list(value, 80)

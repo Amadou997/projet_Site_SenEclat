@@ -154,6 +154,19 @@ def test_site_settings_drive_store_and_quote(admin_api, api, catalog):
     assert SiteSettings.objects.count() == 1
 
 
+def test_analytics_ids_are_validated_and_public(admin_api, api):
+    bad = admin_api.patch("/api/admin/settings/", {"ga4_measurement_id": "UA-1234-1", "clarity_project_id": "<script>"}, format="json")
+    assert bad.status_code == 400 and set(bad.json()["errors"]) >= {"ga4_measurement_id", "clarity_project_id"}
+
+    ok = admin_api.patch("/api/admin/settings/", {"ga4_measurement_id": " g-abc123xyz9 ", "clarity_project_id": "AB12CD34EF"}, format="json")
+    assert ok.status_code == 200, ok.content
+    config = api.get("/api/store/config/").json()
+    assert config["ga4_measurement_id"] == "G-ABC123XYZ9" and config["clarity_project_id"] == "ab12cd34ef"
+
+    assert admin_api.patch("/api/admin/settings/", {"ga4_measurement_id": "", "clarity_project_id": ""}, format="json").status_code == 200
+    assert api.get("/api/store/config/").json()["ga4_measurement_id"] == ""
+
+
 def test_promo_codes_and_messages(admin_api, catalog):
     created = admin_api.post("/api/admin/promo-codes/", {"code": " tabaski ", "percent_off": 15}, format="json")
     assert created.status_code == 201 and created.json()["code"] == "TABASKI"

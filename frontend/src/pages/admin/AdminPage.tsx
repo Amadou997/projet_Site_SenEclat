@@ -7,9 +7,9 @@ import { Customers } from './Customers'
 import { Orders } from './Orders'
 import { Overview } from './Overview'
 import { Products } from './Products'
-import { Messages, Promos, Settings } from './SiteAdmin'
+import { Analytics, Messages, Promos, Settings } from './SiteAdmin'
 
-export type AdminSection = 'overview' | 'products' | 'orders' | 'customers' | 'promos' | 'messages' | 'settings'
+export type AdminSection = 'overview' | 'products' | 'orders' | 'customers' | 'promos' | 'messages' | 'analytics' | 'settings'
 
 const SECTIONS: { id: AdminSection; label: string; title: string }[] = [
   { id: 'overview', label: 'Vue d’ensemble', title: 'Vue d’ensemble' },
@@ -18,6 +18,7 @@ const SECTIONS: { id: AdminSection; label: string; title: string }[] = [
   { id: 'customers', label: 'Clients', title: 'Clients' },
   { id: 'promos', label: 'Codes promo', title: 'Codes promo' },
   { id: 'messages', label: 'Messages', title: 'Messages de contact' },
+  { id: 'analytics', label: 'Statistiques', title: 'Statistiques d’audience' },
   { id: 'settings', label: 'Paramètres du site', title: 'Paramètres du site' },
 ]
 
@@ -101,6 +102,7 @@ export default function AdminPage() {
               {current.id === 'customers' && <Customers />}
               {current.id === 'promos' && <Promos />}
               {current.id === 'messages' && <Messages />}
+              {current.id === 'analytics' && <Analytics />}
               {current.id === 'settings' && <Settings />}
             </motion.div>
           </AnimatePresence>

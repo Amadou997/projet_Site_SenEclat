@@ -89,6 +89,8 @@ export interface SiteSettings {
   delivery_zones: string[]
   fcfa_per_loyalty_point: number
   announcements: string[]
+  ga4_measurement_id: string
+  clarity_project_id: string
   updated_at: string
 }
 

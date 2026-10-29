@@ -20,7 +20,7 @@ from apps.orders.serializers import (
 
 
 class StoreConfigView(APIView):
-    """Paramètres publics affichés par le front (frais, zones desservies, bandeau)."""
+    """Paramètres publics affichés par le front (frais, zones desservies, bandeau, mesure d'audience)."""
 
     permission_classes = [permissions.AllowAny]
 
@@ -32,6 +32,8 @@ class StoreConfigView(APIView):
                 "delivery_zones": site.delivery_zones,
                 "fcfa_per_loyalty_point": site.fcfa_per_loyalty_point,
                 "announcements": site.announcements,
+                "ga4_measurement_id": site.ga4_measurement_id,
+                "clarity_project_id": site.clarity_project_id,
             }
         )
 

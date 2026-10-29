@@ -1,6 +1,7 @@
 import { AnimatePresence, MotionConfig } from 'motion/react'
 import { lazy, Suspense, useEffect, type ReactNode } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { Analytics } from './components/layout/Analytics'
 import { Footer } from './components/layout/Footer'
 import { Header } from './components/layout/Header'
 import { IntroLoader } from './components/layout/IntroLoader'
@@ -83,6 +84,7 @@ export default function App() {
               <IntroLoader />
               <ScrollProgress />
               <ScrollToTop />
+              <Analytics />
               <AnimatedRoutes />
             </FxProvider>
           </CartProvider>

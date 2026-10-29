@@ -1,4 +1,5 @@
 import { createContext, use, useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { trackEvent } from '../lib/analytics'
 import type { CategorySlug, QuoteLine } from '../lib/types'
 
 /**
@@ -75,6 +76,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
       return [...current, { ...line, quantity: Math.min(MAX_QTY, quantity) }]
     })
     setBump((b) => b + 1)
+    trackEvent('add_to_cart', {
+      currency: 'XOF',
+      value: line.unitPrice * quantity,
+      items: [{ item_id: line.slug, item_name: line.name, item_variant: line.variantLabel, item_category: line.category, price: line.unitPrice, quantity }],
+    })
   }, [])
 
   const setQuantity = useCallback((variantId: number, quantity: number) => {

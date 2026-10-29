@@ -10,6 +10,7 @@ import { useCart } from '../context/CartContext'
 import { useAsync } from '../hooks/useAsync'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { useQuote } from '../hooks/useQuote'
+import { trackEvent } from '../lib/analytics'
 import { api, ApiError } from '../lib/api'
 import { formatPrice } from '../lib/format'
 import { rememberOrderKey } from '../lib/orderAccess'
@@ -222,6 +223,12 @@ export default function CheckoutPage() {
         items: lines.map((l) => ({ variant_id: l.variantId, quantity: l.quantity })),
       })
       rememberOrderKey(order.number, order.access_key)
+      trackEvent('purchase', {
+        transaction_id: order.number,
+        currency: 'XOF',
+        value: order.total,
+        items: order.items.map((i) => ({ item_id: i.product_slug, item_name: i.product_name, item_variant: i.variant_label, price: i.unit_price, quantity: i.quantity })),
+      })
       clear()
       navigate(`/commande/confirmation/${order.number}`, { replace: true, state: { order } })
     } catch (err) {
