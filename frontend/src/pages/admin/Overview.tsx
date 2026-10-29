@@ -1,7 +1,30 @@
-import { useState, type ReactNode } from 'react'
+import { useState, type ReactElement, type ReactNode } from 'react'
 import { useAsync } from '../../hooks/useAsync'
 import { api } from '../../lib/api'
 import { formatDate, formatPrice, ORDER_STATUS_CLASS } from '../../lib/format'
+import type { IconProps } from '../../components/Icons'
+import {
+  BasketIcon,
+  CardIcon,
+  CardTitle,
+  CartIcon,
+  ChartIcon,
+  CoinsIcon,
+  IconBadge,
+  LayersIcon,
+  ListIcon,
+  LoginIcon,
+  MailIcon,
+  PackageClockIcon,
+  ReceiptIcon,
+  StockAlertIcon,
+  TrophyIcon,
+  TruckFastIcon,
+  UserHeartIcon,
+  UserPlusIcon,
+  UsersIcon,
+  type IconTone,
+} from './AdminIcons'
 import { AreaChart, BarList, CATEGORY_COLORS, SERIES_COLORS, SplitBar } from './Charts'
 import { LoadState } from './shared'
 import type { AdminStats } from './types'
@@ -28,9 +51,14 @@ function Delta({ now, before, days }: { now: number; before: number; days: numbe
   )
 }
 
-function Kpi({ label, value, hint, onClick }: { label: string; value: string; hint?: ReactNode; onClick?: () => void }) {
+type Icon = (p: IconProps) => ReactElement
+
+function Kpi({ label, value, hint, onClick, icon, tone }: { label: string; value: string; hint?: ReactNode; onClick?: () => void; icon: Icon; tone: IconTone }) {
   const body = (
     <>
+      <span className="kpi__icon">
+        <IconBadge icon={icon} tone={tone} />
+      </span>
       <span className="kpi__label">{label}</span>
       <span className="kpi__value">{value}</span>
       {hint && (typeof hint === 'string' ? <span className="kpi__hint">{hint}</span> : hint)}
@@ -46,11 +74,14 @@ function Kpi({ label, value, hint, onClick }: { label: string; value: string; hi
   )
 }
 
-function TodayItem({ label, value, onClick }: { label: string; value: number; onClick?: () => void }) {
+function TodayItem({ label, value, onClick, icon: Icon }: { label: string; value: number; onClick?: () => void; icon: Icon }) {
   const body = (
     <>
       <span className="kpi__label">{label}</span>
-      <span className="today__value">{formatInt(value)}</span>
+      <span className="today__value">
+        <Icon size={28} strokeWidth={1.3} className="today__icon" />
+        {formatInt(value)}
+      </span>
     </>
   )
   return onClick ? (
@@ -89,33 +120,33 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
       </div>
 
       <div className="kpis kpis--3">
-        <Kpi label="Chiffre d’affaires" value={formatPrice(period.revenue)} hint={<Delta now={period.revenue} before={previous.revenue} days={days} />} />
-        <Kpi label="Commandes" value={formatInt(period.orders)} hint={<Delta now={period.orders} before={previous.orders} days={days} />} onClick={() => go('orders')} />
-        <Kpi label="Panier moyen" value={formatPrice(period.average_basket)} hint={<Delta now={period.average_basket} before={previous.average_basket} days={days} />} />
+        <Kpi label="Chiffre d’affaires" icon={CoinsIcon} tone="vert" value={formatPrice(period.revenue)} hint={<Delta now={period.revenue} before={previous.revenue} days={days} />} />
+        <Kpi label="Commandes" icon={BasketIcon} tone="prune" value={formatInt(period.orders)} hint={<Delta now={period.orders} before={previous.orders} days={days} />} onClick={() => go('orders')} />
+        <Kpi label="Panier moyen" icon={CartIcon} tone="bleu" value={formatPrice(period.average_basket)} hint={<Delta now={period.average_basket} before={previous.average_basket} days={days} />} />
         <Kpi
-          label="Nouveaux clients"
+          label="Nouveaux clients" icon={UserPlusIcon} tone="or"
           value={formatInt(period.customers_new)}
           hint={<Delta now={period.customers_new} before={previous.customers_new} days={days} />}
           onClick={() => go('customers')}
         />
-        <Kpi label="Clients inscrits" value={formatInt(data.customers_total)} hint={`${formatPrice(data.revenue_total)} de ventes depuis l’ouverture`} onClick={() => go('customers')} />
-        <Kpi label="Clients fidèles" value={`${data.repeat_customer_rate} %`} hint="des acheteurs ont commandé au moins 2 fois" />
+        <Kpi label="Clients inscrits" icon={UsersIcon} tone="or" value={formatInt(data.customers_total)} hint={`${formatPrice(data.revenue_total)} de ventes depuis l’ouverture`} onClick={() => go('customers')} />
+        <Kpi label="Clients fidèles" icon={UserHeartIcon} tone="vert" value={`${data.repeat_customer_rate} %`} hint="des acheteurs ont commandé au moins 2 fois" />
       </div>
 
       <section className="admin-card today" aria-label="Aujourd’hui">
-        <TodayItem label="Inscriptions aujourd’hui" value={data.today.registrations} />
-        <TodayItem label="Connexions aujourd’hui" value={data.today.logins} />
-        <TodayItem label="Commandes aujourd’hui" value={data.today.orders} />
-        <TodayItem label="À préparer" value={data.orders_to_process} onClick={() => go('orders')} />
-        <TodayItem label="Messages à traiter" value={data.messages_unhandled} onClick={() => go('messages')} />
+        <TodayItem icon={UserPlusIcon} label="Inscriptions aujourd’hui" value={data.today.registrations} />
+        <TodayItem icon={LoginIcon} label="Connexions aujourd’hui" value={data.today.logins} />
+        <TodayItem icon={CartIcon} label="Commandes aujourd’hui" value={data.today.orders} />
+        <TodayItem icon={PackageClockIcon} label="À préparer" value={data.orders_to_process} onClick={() => go('orders')} />
+        <TodayItem icon={MailIcon} label="Messages à traiter" value={data.messages_unhandled} onClick={() => go('messages')} />
       </section>
 
       <div className="admin-cols admin-cols--main">
         <section className="admin-card" aria-labelledby="chart-sales">
           <div className="viz-head">
-            <h2 id="chart-sales" className="h3">
+            <CardTitle id="chart-sales" icon={ChartIcon} tone="prune">
               {metric === 'revenue' ? 'Chiffre d’affaires' : 'Commandes'} par jour
-            </h2>
+            </CardTitle>
             <div className="segmented segmented--sm" role="group" aria-label="Mesure affichée">
               <button type="button" className={`segmented__btn ${metric === 'revenue' ? 'segmented__btn--on' : ''}`} aria-pressed={metric === 'revenue'} onClick={() => setMetric('revenue')}>
                 FCFA
@@ -156,9 +187,9 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
         </section>
 
         <section className="admin-card" aria-labelledby="chart-shipping">
-          <h2 id="chart-shipping" className="h3">
+          <CardTitle id="chart-shipping" icon={TruckFastIcon} tone="bleu">
             Livraison ou retrait
-          </h2>
+          </CardTitle>
           <SplitBar
             data={data.by_shipping.map((s, i) => ({
               key: s.key,
@@ -168,7 +199,9 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
             }))}
             unit={(v) => plural(v, 'commande')}
           />
-          <h2 className="h3">Statut des commandes</h2>
+          <CardTitle icon={ListIcon} tone="neutre">
+            Statut des commandes
+          </CardTitle>
           <ul role="list" className="admin-list">
             {data.by_status.map((s) => (
               <li key={s.key}>
@@ -182,9 +215,9 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
 
       <div className="admin-cols">
         <section className="admin-card" aria-labelledby="chart-category">
-          <h2 id="chart-category" className="h3">
+          <CardTitle id="chart-category" icon={LayersIcon} tone="or">
             Ventes par catégorie
-          </h2>
+          </CardTitle>
           <BarList
             data={data.by_category.map((c) => ({
               key: c.category,
@@ -198,9 +231,9 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
           />
         </section>
         <section className="admin-card" aria-labelledby="chart-payment">
-          <h2 id="chart-payment" className="h3">
+          <CardTitle id="chart-payment" icon={CardIcon} tone="vert">
             Moyens de paiement
-          </h2>
+          </CardTitle>
           <BarList
             data={data.by_payment.map((p, i) => ({
               key: p.key,
@@ -217,9 +250,9 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
 
       <div className="admin-cols">
         <section className="admin-card" aria-labelledby="low-stock">
-          <h2 id="low-stock" className="h3">
+          <CardTitle id="low-stock" icon={StockAlertIcon} tone="or">
             Stock bas
-          </h2>
+          </CardTitle>
           {data.low_stock.length === 0 ? (
             <p className="muted">Aucun format sous le seuil de 5 unités.</p>
           ) : (
@@ -238,9 +271,9 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
           )}
         </section>
         <section className="admin-card" aria-labelledby="top-products">
-          <h2 id="top-products" className="h3">
+          <CardTitle id="top-products" icon={TrophyIcon} tone="prune">
             Meilleures ventes
-          </h2>
+          </CardTitle>
           {data.top_products.length === 0 ? (
             <p className="muted">Aucune vente enregistrée.</p>
           ) : (
@@ -258,7 +291,12 @@ export function Overview({ go }: { go: (section: AdminSection) => void }) {
 
       <div className="table-wrap">
         <table className="table">
-          <caption className="table__caption">Dernières commandes</caption>
+          <caption className="table__caption">
+            <span className="card-title">
+              <IconBadge icon={ReceiptIcon} tone="prune" size="sm" />
+              Dernières commandes
+            </span>
+          </caption>
           <thead>
             <tr>
               <th scope="col">Commande</th>

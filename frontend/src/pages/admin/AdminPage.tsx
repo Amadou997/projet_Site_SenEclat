@@ -3,6 +3,19 @@ import { Link, Navigate, useNavigate, useSearchParams } from 'react-router-dom'
 import { Logo } from '../../components/layout/Logo'
 import { useAuth } from '../../context/AuthContext'
 import { useDocumentTitle } from '../../hooks/useDocumentTitle'
+import {
+  BoxIcon,
+  ChartIcon,
+  DashboardIcon,
+  MailIcon,
+  ReceiptIcon,
+  SettingsIcon,
+  TagIcon,
+  UsersIcon,
+  IconBadge,
+} from './AdminIcons'
+import type { IconProps } from '../../components/Icons'
+import type { ReactElement } from 'react'
 import { Customers } from './Customers'
 import { Orders } from './Orders'
 import { Overview } from './Overview'
@@ -11,15 +24,15 @@ import { Analytics, Messages, Promos, Settings } from './SiteAdmin'
 
 export type AdminSection = 'overview' | 'products' | 'orders' | 'customers' | 'promos' | 'messages' | 'analytics' | 'settings'
 
-const SECTIONS: { id: AdminSection; label: string; title: string }[] = [
-  { id: 'overview', label: 'Vue d’ensemble', title: 'Vue d’ensemble' },
-  { id: 'products', label: 'Produits', title: 'Catalogue produits' },
-  { id: 'orders', label: 'Commandes', title: 'Commandes' },
-  { id: 'customers', label: 'Clients', title: 'Clients' },
-  { id: 'promos', label: 'Codes promo', title: 'Codes promo' },
-  { id: 'messages', label: 'Messages', title: 'Messages de contact' },
-  { id: 'analytics', label: 'Statistiques', title: 'Statistiques d’audience' },
-  { id: 'settings', label: 'Paramètres du site', title: 'Paramètres du site' },
+const SECTIONS: { id: AdminSection; label: string; title: string; icon: (p: IconProps) => ReactElement }[] = [
+  { id: 'overview', label: 'Vue d’ensemble', title: 'Vue d’ensemble', icon: DashboardIcon },
+  { id: 'products', label: 'Produits', title: 'Catalogue produits', icon: BoxIcon },
+  { id: 'orders', label: 'Commandes', title: 'Commandes', icon: ReceiptIcon },
+  { id: 'customers', label: 'Clients', title: 'Clients', icon: UsersIcon },
+  { id: 'promos', label: 'Codes promo', title: 'Codes promo', icon: TagIcon },
+  { id: 'messages', label: 'Messages', title: 'Messages de contact', icon: MailIcon },
+  { id: 'analytics', label: 'Statistiques', title: 'Statistiques d’audience', icon: ChartIcon },
+  { id: 'settings', label: 'Paramètres du site', title: 'Paramètres du site', icon: SettingsIcon },
 ]
 
 export default function AdminPage() {
@@ -80,13 +93,19 @@ export default function AdminPage() {
               onClick={() => go(s.id)}
             >
               {current.id === s.id && <motion.span layoutId="admin-pill" className="dash__pill" />}
-              <span className="dash__label">{s.label}</span>
+              <span className="dash__label">
+                <s.icon size={19} />
+                {s.label}
+              </span>
             </button>
           ))}
         </nav>
 
         <div className="dash__main">
-          <h1 className="h1">{current.title}</h1>
+          <div className="admin-title">
+            <IconBadge icon={current.icon} tone="prune" />
+            <h1 className="h1">{current.title}</h1>
+          </div>
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}

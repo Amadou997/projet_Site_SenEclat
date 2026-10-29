@@ -1,9 +1,9 @@
 import type { SVGProps } from 'react'
 
 /** Icônes du système de design : trait 1,5 px, angles arrondis, `currentColor`. */
-type IconProps = SVGProps<SVGSVGElement> & { size?: number; strokeWidth?: number }
+export type IconProps = SVGProps<SVGSVGElement> & { size?: number; strokeWidth?: number }
 
-function Stroke({ size = 22, strokeWidth = 1.5, children, ...rest }: IconProps) {
+export function Stroke({ size = 22, strokeWidth = 1.5, children, ...rest }: IconProps) {
   return (
     <svg
       width={size}

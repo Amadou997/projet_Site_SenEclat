@@ -173,7 +173,7 @@ export function BarList({ data, format, empty }: { data: BarDatum[]; format: (v:
           </span>
           <span className="viz-bars__value">
             {format(d.value)}
-            {d.detail && <span className="muted"> · {d.detail}</span>}
+            {d.detail && <span className="muted">{d.detail}</span>}
           </span>
         </li>
       ))}
@@ -197,9 +197,11 @@ export function SplitBar({ data, unit }: { data: BarDatum[]; unit: (v: number) =
         {data.map((d) => (
           <li key={d.key}>
             <span className="viz-bars__swatch" style={{ background: d.color }} aria-hidden="true" />
-            <span>{d.label}</span>
+            <span className="viz-legend__text">
+              {d.label}
+              <span className="muted admin-small">{unit(d.value)}</span>
+            </span>
             <strong>{Math.round((d.value / total) * 100)} %</strong>
-            <span className="muted">({unit(d.value)})</span>
           </li>
         ))}
       </ul>
