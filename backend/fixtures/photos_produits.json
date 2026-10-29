@@ -905,9 +905,9 @@
  {
   "reference": "186/6051",
   "old_image": "products/0029696757d546639b6f5ebc2989b27b.png",
-  "image": "products/photos/brosse-vetements-poignee.webp",
-  "name": "Brosse à vêtements avec poignée",
-  "short_description": "Brosse à vêtements en bois avec poils noirs, retire poussière et peluches."
+  "image": "products/photos/brosse-vetements-manche.webp",
+  "name": "Brosse à vêtements avec manche",
+  "short_description": "Brosse à vêtements à poils doux et efficaces, tête large, manche ergonomique avec trou de suspension. Coloris : beige, rose, bleu, gris."
  },
  {
   "reference": "6920354812521",
@@ -1475,5 +1475,187 @@
   "image": "products/photos/ensemble-3-poeles-20-24-28.webp",
   "name": "Ensemble de 3 poêles à frire 20, 24 et 28 cm",
   "short_description": "Revêtement antiadhésif haute qualité, compatible tous feux (gaz, électrique, vitrocéramique), facile à nettoyer."
+ },
+ {
+  "reference": "144/001051",
+  "old_image": "products/75c8b9d0c7144769890cccf09e3c7160.png",
+  "image": "products/photos/egouttoir-legumes-rdn-3-5l.webp",
+  "name": "Essoreuse et égouttoir à légumes 3,5 L",
+  "short_description": "Essoreuse à salade 3,5 L : panier amovible, essorage rapide par bouton poussoir, couvercle verrouillable par clips."
+ },
+ {
+  "reference": "144/001055",
+  "old_image": "products/1123a56a85d84fdf9fb5e214079a32f0.png",
+  "image": "products/photos/essoreuse-salade-color-design-3-5l.webp",
+  "name": "Essoreuse à salade Color Design 3,5 L",
+  "short_description": "Essoreuse à salade et légumes 3,5 L avec panier amovible et essorage rapide. Coloris : vert, rouge, bleu, gris."
+ },
+ {
+  "reference": "144/001865",
+  "old_image": "products/b9e43a5d670f4ca6b414017c07bc407d.png",
+  "image": "products/photos/bac-gastronorme-robinet-4-3l.webp",
+  "name": "Bac gastronorme 1/3 avec robinet 4,3 L",
+  "short_description": "Distributeur de boissons format GN 1/3 (325 x 176 mm), 4,3 L, avec couvercle et robinet pratique. Idéal pour jus et eaux aromatisées."
+ },
+ {
+  "reference": "144/003095",
+  "old_image": "products/8c6ad131071e4fb59351cf2c72a303d9.png",
+  "image": "products/photos/panier-rectangulaire-bca-20l.webp",
+  "name": "Panier rectangulaire multi-usages avec poignées 20 L",
+  "short_description": "Panier de rangement ajouré 20 L, solide et pratique, poignées ergonomiques. Coloris : taupe, bleu, rose, blanc."
+ },
+ {
+  "reference": "144/003099",
+  "old_image": "products/343a83dd44b441608f2d52729bd499ac.png",
+  "image": "products/photos/panier-droit-bca-poignees-argent-20l.webp",
+  "name": "Panier droit multi-usages poignées argent 20 L",
+  "short_description": "Panier droit ajouré 20 L, solide et durable, poignées finition argent. Coloris : taupe, bleu, rose, blanc, gris."
+ },
+ {
+  "reference": "186/6051",
+  "old_image": "products/photos/brosse-vetements-poignee.webp",
+  "image": "products/photos/brosse-vetements-manche.webp",
+  "name": "Brosse à vêtements avec manche",
+  "short_description": "Brosse à vêtements à poils doux et efficaces, tête large, manche ergonomique avec trou de suspension. Coloris : beige, rose, bleu, gris."
+ },
+ {
+  "reference": "186/6050",
+  "old_image": "products/18aa61f665584e8e9486f04f353fc701.png",
+  "image": "products/photos/brosse-multiusages-manche.webp",
+  "name": "Brosse multi-usages avec manche",
+  "short_description": "Brosse à poils résistants et tête robuste pour la maison, les sols, la cuisine et la salle de bain. Coloris : gris, bleu, rouge, vert, rose."
+ },
+ {
+  "reference": "1275/23045",
+  "old_image": "products/45095fac37fa49d78381ab3a9ba5b2e2.png",
+  "image": "products/photos/caravan-femme-n45-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°45",
+  "short_description": "Eau de parfum Caravan N°45 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23046",
+  "old_image": "products/9e740c30fe054bce892124974c435564.png",
+  "image": "products/photos/caravan-femme-n46-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°46",
+  "short_description": "Eau de parfum Caravan N°46 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23054",
+  "old_image": "products/720ef8c8c16e48b1aec29b252d44a0a6.png",
+  "image": "products/photos/caravan-homme-n54-150ml.webp",
+  "name": "Parfum Caravan homme 150 ml N°54",
+  "short_description": "Eau de parfum Caravan N°54 pour homme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23058",
+  "old_image": "products/9477c943d9454bdc989e72512c325162.png",
+  "image": "products/photos/caravan-homme-n58-150ml.webp",
+  "name": "Parfum Caravan homme 150 ml N°58",
+  "short_description": "Eau de parfum Caravan N°58 pour homme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23059",
+  "old_image": "products/5244daf34f2c4fac887e0593874e8155.png",
+  "image": "products/photos/caravan-homme-n59-150ml.webp",
+  "name": "Parfum Caravan homme 150 ml N°59",
+  "short_description": "Eau de parfum Caravan N°59 pour homme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23056",
+  "old_image": "products/450391dde3b448a7bd3a61f91947255e.png",
+  "image": "products/photos/caravan-homme-n66-150ml.webp",
+  "name": "Parfum Caravan homme 150 ml N°66",
+  "short_description": "Eau de parfum Caravan N°66 pour homme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23040",
+  "old_image": "products/e02602f9ae1949178c1f68238e6fa2ca.png",
+  "image": "products/photos/caravan-femme-n80-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°80",
+  "short_description": "Eau de parfum Caravan N°80 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23032",
+  "old_image": "products/ab072231c2e34789a91aa6f0df1f22e7.png",
+  "image": "products/photos/caravan-femme-n82-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°82",
+  "short_description": "Eau de parfum Caravan N°82 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23086",
+  "old_image": "products/37ed17479af644478502136b12d244c7.png",
+  "image": "products/photos/caravan-femme-n86-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°86",
+  "short_description": "Eau de parfum Caravan N°86 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23021",
+  "old_image": "products/3e408bb0c8794674bf1d416529192360.png",
+  "image": "products/photos/caravan-femme-n21-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°21",
+  "short_description": "Eau de parfum Caravan N°21 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23042",
+  "old_image": "products/334fc36366a74098ab202fb037677ce8.png",
+  "image": "products/photos/caravan-femme-n42-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°42",
+  "short_description": "Eau de parfum Caravan N°42 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23036",
+  "old_image": "products/ea1c2dc82b514ad5911572f0638b42c7.png",
+  "image": "products/photos/caravan-femme-n36-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°36",
+  "short_description": "Eau de parfum Caravan N°36 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23029",
+  "old_image": "products/460fd9551b4941a1861efc42cb25f4e6.png",
+  "image": "products/photos/caravan-femme-n29-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°29",
+  "short_description": "Eau de parfum Caravan N°29 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23031",
+  "old_image": "products/75dcca62897448aa8832fcef0242e06b.png",
+  "image": "products/photos/caravan-femme-n31-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°31",
+  "short_description": "Eau de parfum Caravan N°31 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23043",
+  "old_image": "products/b7b9c1b14a724148bd8379324eed0650.png",
+  "image": "products/photos/caravan-femme-n43-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°43",
+  "short_description": "Eau de parfum Caravan N°43 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23023",
+  "old_image": "products/ad400142c0c54f57b310d5f12bddeb36.png",
+  "image": "products/photos/caravan-femme-n23-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°23",
+  "short_description": "Eau de parfum Caravan N°23 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23024",
+  "old_image": "products/6da400e78d60498599b0c2e0d1bfde2f.png",
+  "image": "products/photos/caravan-femme-n24-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°24",
+  "short_description": "Eau de parfum Caravan N°24 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23026",
+  "old_image": "products/52e5aafdca484e39b73ba067deff918b.png",
+  "image": "products/photos/caravan-femme-n26-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°26",
+  "short_description": "Eau de parfum Caravan N°26 pour femme, vaporisateur naturel 150 ml."
+ },
+ {
+  "reference": "1275/23035",
+  "old_image": "products/93621e4f7049475a83797eb02a9781b3.png",
+  "image": "products/photos/caravan-femme-n35-150ml.webp",
+  "name": "Parfum Caravan femme 150 ml N°35",
+  "short_description": "Eau de parfum Caravan N°35 pour femme, vaporisateur naturel 150 ml."
  }
 ]
