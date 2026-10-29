@@ -1832,5 +1832,166 @@
   "image": "products/photos/chiffons-microfibre-x5-32x32.webp",
   "name": "Chiffons microfibre x5 32x32 cm",
   "short_description": "Chiffon microfibre 32 x 32 cm, lot de 5, 190 g/m² : haute absorption, nettoyage sans traces, doux et non abrasif, lavable en machine. Coloris : gris, bleu, jaune, vert, rouge."
+ },
+ {
+  "reference": "8700216304467",
+  "old_image": "products/4045872e974a4834ba98f255d1eb1a50.png",
+  "image": "products/photos/ariel-valisette-couleur-140-doses.webp",
+  "name": "Ariel lessive valisette couleur 140 doses",
+  "short_description": "Lessive en capsules Ariel All-in-1 Couleur, valisette de 140 doses avec une touche de Lenor : détachant efficace dès 30 °C, dose prête à l'emploi, respecte les couleurs."
+ },
+ {
+  "reference": "9300631115434",
+  "old_image": "products/cd1c3b214a5b4289a99c113e904ec886.png",
+  "image": "products/photos/veet-men-creme-gel-200ml.webp",
+  "name": "Veet Men crème-gel dépilatoire 200 ml",
+  "short_description": "Crème dépilatoire Veet Men crème-gel pour homme, peaux normales, en tube de 200 ml : action rapide, résultat net et peau douce."
+ },
+ {
+  "reference": "8410104249601",
+  "old_image": "products/0d0ab95fa3b64cce8d56ce764957a427.png",
+  "image": "products/photos/veet-men-peau-sensible-200ml.webp",
+  "name": "Veet Men crème dépilatoire peau sensible 200 ml",
+  "short_description": "Crème dépilatoire Veet Men pour homme, formule douce peaux sensibles, en tube de 200 ml : action rapide, résultat net et peau douce."
+ },
+ {
+  "reference": "8410104274160",
+  "old_image": "products/2a20e7b6e98d46d49a2e258d0aa1958c.png",
+  "image": "products/photos/veet-peaux-sensibles-200ml.webp",
+  "name": "Veet crème dépilatoire peaux sensibles 200 ml",
+  "short_description": "Crème dépilatoire Veet peaux sensibles, hydratation 24 h, en tube de 200 ml : action rapide, résultat net et peau douce."
+ },
+ {
+  "reference": "8410104437749",
+  "old_image": "products/356da37f8c25439d890ed6c359dc9a60.png",
+  "image": "products/photos/veet-peau-normale-200ml.webp",
+  "name": "Veet crème dépilatoire peau normale 200 ml",
+  "short_description": "Crème dépilatoire Veet peau normale, hydratation 24 h, en tube de 200 ml : action rapide, résultat net et peau douce."
+ },
+ {
+  "reference": "8414719407081",
+  "old_image": "products/ceb52ffb70594665956e10ed98247f8a.png",
+  "image": "products/photos/body-natur-depilation-corps-200ml.webp",
+  "name": "Body Natur crème dépilatoire tube 200 ml",
+  "short_description": "Crème dépilatoire Body Natur corps, efficace et douce pour peaux sensibles, en tube de 200 ml : action rapide, résultat net et peau douce."
+ },
+ {
+  "reference": "8414719407333",
+  "old_image": "products/8f3b5c0419234fd7a845e1c6fbb39d13.png",
+  "image": "products/photos/body-natur-depilation-homme-200ml.webp",
+  "name": "Body Natur crème dépilatoire homme tube 200 ml",
+  "short_description": "Crème dépilatoire Body Natur Homme, précise et confortable pour la peau masculine, en tube de 200 ml : action rapide, résultat net et peau douce."
+ },
+ {
+  "reference": "8437014661880",
+  "old_image": "products/750e33738cb049509788014448975275.png",
+  "image": "products/photos/s3-eau-de-cologne-fraicheur-classique-600ml.webp",
+  "name": "S-3 eau de Cologne fraîcheur classique 600 ml",
+  "short_description": "Eau de Cologne S-3 fraîcheur classique 600 ml : notes d'agrumes et de bergamote, idéale après la douche pour toute la famille."
+ },
+ {
+  "reference": "8006540588604",
+  "old_image": "products/0b33bd86d43d4bee9f6361546acce22e.png",
+  "image": "products/photos/ariel-valisette-actilift-65-doses.webp",
+  "name": "Ariel lessive valisette Actilift 65 doses",
+  "short_description": "Lessive en capsules Ariel All-in-1 Actilift, valisette de 65 doses avec une touche de Lenor : détachant efficace dès 30 °C, dose prête à l'emploi, respecte les couleurs."
+ },
+ {
+  "reference": "8002410032550",
+  "old_image": "products/98316ea2db644b64ab355271b660edba.png",
+  "image": "products/photos/chilly-gel-intime-protect-200ml-v2.webp",
+  "name": "Chilly gel intime Protect 200 ml",
+  "short_description": "Gel intime Chilly Protect 200 ml : formule douce et équilibrée au pH physiologique, action protectrice et apaisante, testé gynécologiquement."
+ },
+ {
+  "reference": "8700216788670",
+  "old_image": "products/595203a331954644a47d8268c9caa6bb.png",
+  "image": "products/photos/ariel-liquide-fraicheur-alpine-25-5.webp",
+  "name": "Ariel lessive liquide fraîcheur alpine 25+5 doses",
+  "short_description": "Lessive liquide Ariel fraîcheur alpine 25+5 lavages, action anti-bouloche, : nettoyage en profondeur, fraîcheur durable, efficace dès 30 °C."
+ },
+ {
+  "reference": "8700216748094",
+  "old_image": "products/c29341e16c974a44b4ee5e99fb2df4b5.png",
+  "image": "products/photos/ariel-liquide-regular-2x70.webp",
+  "name": "Ariel lessive liquide Regular 2x70 doses",
+  "short_description": "Lessive liquide Ariel Régulier, 2 bouteilles de 70 lavages, respecte les couleurs, : nettoyage en profondeur, fraîcheur durable, efficace dès 30 °C."
+ },
+ {
+  "reference": "8410225537786",
+  "old_image": "products/d9ab6eb6ad2441d28788db497582254e.png",
+  "image": "products/photos/heno-de-pravia-colonia-650ml.webp",
+  "name": "Heno de Pravia eau de Cologne 650 ml",
+  "short_description": "Eau de Cologne Heno de Pravia 650 ml : le parfum authentique et classique de la célèbre marque espagnole, frais et délicat."
+ },
+ {
+  "reference": "8006530031165",
+  "old_image": "products/d6654f3dfb8c45038ddb2d94bff1e024.png",
+  "image": "products/photos/ariel-capsules-regular-23-12.webp",
+  "name": "Ariel capsules lessive Regular 23+12",
+  "short_description": "Lessive en capsules Ariel All-in-1 Régulier, 23 capsules + 12 offertes : détachant efficace dès 30 °C, dose prête à l'emploi, respecte les couleurs."
+ },
+ {
+  "reference": "8700216961103",
+  "old_image": "products/e2a91f81484042f494dec4fe42341523.png",
+  "image": "products/photos/ariel-capsules-fleuri-x18.webp",
+  "name": "Ariel capsules lessive fleuri x18",
+  "short_description": "Lessive en capsules Ariel All-in-1 Fleuri, 18 capsules liquides concentrées au parfum floral : détachant efficace dès 30 °C, dose prête à l'emploi, respecte les couleurs."
+ },
+ {
+  "reference": "8006530037129",
+  "old_image": "products/814c143accd74b4189429cbf65661f0c.png",
+  "image": "products/photos/lenor-fleurs-sauvages-36-14.webp",
+  "name": "Lenor adoucissant fleurs sauvages 36+14 doses",
+  "short_description": "Adoucissant concentré Lenor Fleurs sauvages, 36 doses + 14 offertes : fraîcheur longue durée, linge doux pour la peau."
+ },
+ {
+  "reference": "8999999058401",
+  "old_image": "products/e7d264a4eebb485c9b7d1db925804807.png",
+  "image": "products/photos/camay-savon-classique-3x125g.webp",
+  "name": "Camay savon Classic 3x125 g",
+  "short_description": "Savon de toilette Camay Classique, lot de 3 x 125 g : mousse onctueuse et parfum délicat qui prend soin de la peau."
+ },
+ {
+  "reference": "8700216702478",
+  "old_image": "products/1cd7c13a1cd84ff69b2fd2f265676c8f.png",
+  "image": "products/photos/ariel-valisette-original-lenor-90-doses.webp",
+  "name": "Ariel lessive valisette Original Lenor 90 doses",
+  "short_description": "Lessive en capsules Ariel All-in-1 Original avec Lenor, valisette de 90 doses : détachant efficace dès 30 °C, dose prête à l'emploi, respecte les couleurs."
+ },
+ {
+  "reference": "8700216748469",
+  "old_image": "products/32a2481f1ee34ec186ed250659ae1d06.png",
+  "image": "products/photos/ariel-liquide-base-2x60.webp",
+  "name": "Ariel lessive liquide Basic 2x60 doses",
+  "short_description": "Lessive liquide Ariel Base, 2 bouteilles de 60 lavages, efficacité essentielle, : nettoyage en profondeur, fraîcheur durable, efficace dès 30 °C."
+ },
+ {
+  "reference": "8410751051107",
+  "old_image": "products/b82c6bd709fa46268a2d632af1c0caf1.png",
+  "image": "products/photos/actoner-bain-de-bouche-7-en-1-500ml.webp",
+  "name": "Actoner bain de bouche complet 7 en 1 500 ml",
+  "short_description": "Bain de bouche Actoner complet 7 en 1, 500 ml : anti-plaque, anti-tartre, renforce l'émail, protège les gencives et rafraîchit l'haleine."
+ },
+ {
+  "reference": "8006530356152",
+  "old_image": "products/203d26e208c24f91a2851a1fe40f204b.png",
+  "image": "products/photos/ariel-liquide-platinum-2x1800ml.webp",
+  "name": "Ariel lessive liquide Platinum 2x1800 ml",
+  "short_description": "Lessive liquide Ariel Platine concentré, 2 x 1,8 L soit 120 lavages, éclat des couleurs, : nettoyage en profondeur, fraîcheur durable, efficace dès 30 °C."
+ },
+ {
+  "reference": "8002410032567",
+  "old_image": "products/5c44d861918f4fbbb66c358ea6ac7dfc.png",
+  "image": "products/photos/chilly-gel-intime-delicate-250ml.webp",
+  "name": "Chilly gel intime Delicate 250 ml",
+  "short_description": "Gel intime Chilly Délicat 250 ml : formule douce et respectueuse au pH équilibré, action apaisante au quotidien."
+ },
+ {
+  "reference": "8001090501165",
+  "old_image": "products/339941e9b41a4e51af8b36793e99e713.png",
+  "image": "products/photos/mr-proper-salle-de-bain-1300-200ml.webp",
+  "name": "Mr. Proper nettoyant salle de bain 1300+200 ml",
+  "short_description": "Nettoyant salle de bain Mr. Proper 1300 ml + 200 ml offerts : douche, toilettes et lavabo, élimine le calcaire et laisse une odeur fraîche."
  }
 ]
