@@ -214,3 +214,22 @@ def test_product_image_upload(admin_api, settings, tmp_path):
 
     assert admin_api.delete(url).json()["image_url"] == ""
     assert not list((tmp_path / "products").iterdir())
+
+
+def test_stats_series_and_breakdowns(admin_api, api, catalog):
+    api.credentials(HTTP_AUTHORIZATION=f"Bearer {register(api)['access']}")
+    for qty in (1, 2):
+        payload = {**ORDER, "items": [{"variant_id": catalog["lessive"].pk, "quantity": qty}]}
+        assert api.post("/api/orders/", payload, format="json").status_code == 201
+
+    stats = admin_api.get("/api/admin/stats/", {"days": 7}).json()
+    assert stats["period_days"] == 7 and len(stats["series"]) == 7
+    assert stats["series"][-1]["orders"] == 2 and stats["series"][-1]["revenue"] == stats["period"]["revenue"]
+    assert stats["period"]["orders"] == 2 and stats["previous"]["orders"] == 0
+    assert stats["today"] == {"orders": 2, "registrations": 1, "logins": 1}
+    assert stats["repeat_customer_rate"] == 100
+    lessive = next(c for c in stats["by_category"] if c["category"] == "lessive")
+    assert lessive["quantity"] == 3
+    assert next(p for p in stats["by_payment"] if p["key"] == "wave")["orders"] == 2
+    assert next(s for s in stats["by_shipping"] if s["key"] == "pickup")["orders"] == 2
+    assert admin_api.get("/api/admin/stats/", {"days": "abc"}).json()["period_days"] == 30

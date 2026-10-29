@@ -1,9 +1,9 @@
 """API du tableau de bord d'administration : réservée aux comptes `is_staff`."""
 
-from datetime import timedelta
+from datetime import datetime, time, timedelta
 
 from django.db.models import Count, Max, Q, Sum
-from django.db.models.functions import Coalesce
+from django.db.models.functions import Coalesce, TruncDate
 from django.utils import timezone
 from rest_framework import mixins, permissions, status, viewsets
 from rest_framework.decorators import action
@@ -25,13 +25,95 @@ from apps.backoffice.serializers import (
     ProductImageSerializer,
     SiteSettingsSerializer,
 )
-from apps.catalog.models import Product, ProductVariant
+from apps.catalog.models import Category, Product, ProductVariant
 from apps.contact.models import ContactMessage
 from apps.orders import services
-from apps.orders.models import Order, OrderStatus, PromoCode
+from apps.orders.models import Order, OrderItem, OrderStatus, PaymentMethod, PromoCode, ShippingMethod
 
 LOW_STOCK_THRESHOLD = 5
 _REVENUE_FILTER = ~Q(status=OrderStatus.CANCELLED)
+STATS_PERIODS = (7, 30, 90)
+
+
+def _totals(orders) -> dict:
+    agg = orders.aggregate(revenue=Coalesce(Sum("total"), 0), count=Count("id"))
+    return {
+        "revenue": agg["revenue"],
+        "orders": agg["count"],
+        "average_basket": agg["revenue"] // agg["count"] if agg["count"] else 0,
+    }
+
+
+def _analytics(days: int) -> dict:
+    """Séries et répartitions de la période (jours entiers, heure de Dakar) et de la période précédente."""
+    today = timezone.localdate()
+    tz = timezone.get_current_timezone()
+    start = timezone.make_aware(datetime.combine(today - timedelta(days=days - 1), time.min), tz)
+    prev_start = start - timedelta(days=days)
+    day_start = timezone.make_aware(datetime.combine(today, time.min), tz)
+
+    valid = Order.objects.filter(_REVENUE_FILTER)
+    current = valid.filter(created_at__gte=start)
+    previous = valid.filter(created_at__gte=prev_start, created_at__lt=start)
+    customers = User.objects.filter(is_staff=False)
+
+    per_day = {
+        row["day"]: row
+        for row in current.annotate(day=TruncDate("created_at", tzinfo=tz))
+        .values("day")
+        .annotate(revenue=Sum("total"), orders=Count("id"))
+    }
+    series = []
+    for offset in range(days):
+        day = today - timedelta(days=days - 1 - offset)
+        row = per_day.get(day, {})
+        series.append({"date": day.isoformat(), "revenue": row.get("revenue", 0), "orders": row.get("orders", 0)})
+
+    labels = dict(Category.choices)
+    by_category = {key: {"category": key, "label": label, "revenue": 0, "quantity": 0} for key, label in Category.choices}
+    for row in (
+        OrderItem.objects.filter(order__in=current)
+        .values("variant__product__category")
+        .annotate(revenue=Sum("line_total"), quantity=Sum("quantity"))
+    ):
+        key = row["variant__product__category"] or "autre"
+        entry = by_category.setdefault(key, {"category": key, "label": labels.get(key, "Autre"), "revenue": 0, "quantity": 0})
+        entry["revenue"] += row["revenue"]
+        entry["quantity"] += row["quantity"]
+
+    def breakdown(field: str, choices) -> list[dict]:
+        counts = {r[field]: r for r in current.values(field).annotate(orders=Count("id"), revenue=Sum("total"))}
+        return [
+            {"key": key, "label": label, "orders": counts.get(key, {}).get("orders", 0), "revenue": counts.get(key, {}).get("revenue", 0)}
+            for key, label in choices
+        ]
+
+    buyers = valid.filter(user__isnull=False).values("user").annotate(n=Count("id"))
+    buyers_total = buyers.count()
+    repeat = buyers.filter(n__gte=2).count()
+
+    return {
+        "period_days": days,
+        "period": {**_totals(current), "customers_new": customers.filter(date_joined__gte=start).count()},
+        "previous": {
+            **_totals(previous),
+            "customers_new": customers.filter(date_joined__gte=prev_start, date_joined__lt=start).count(),
+        },
+        "today": {
+            "orders": Order.objects.filter(created_at__gte=day_start).count(),
+            "registrations": customers.filter(date_joined__gte=day_start).count(),
+            "logins": customers.filter(last_login__gte=day_start).count(),
+        },
+        "repeat_customer_rate": round(100 * repeat / buyers_total) if buyers_total else 0,
+        "series": series,
+        "by_category": list(by_category.values()),
+        "by_payment": breakdown("payment_method", PaymentMethod.choices),
+        "by_shipping": breakdown("shipping_method", ShippingMethod.choices),
+        "by_status": [
+            {"key": key, "label": label, "count": Order.objects.filter(created_at__gte=start, status=key).count()}
+            for key, label in OrderStatus.choices
+        ],
+    }
 
 
 class AdminPagination(PageNumberPagination):
@@ -75,8 +157,15 @@ class StatsView(APIView):
         )
         top_products = Product.objects.filter(sales_count__gt=0).order_by("-sales_count")[:5]
         recent = Order.objects.prefetch_related("items")[:6]
+        try:
+            days = int(request.query_params.get("days", 30))
+        except ValueError:
+            days = 30
+        if days not in STATS_PERIODS:
+            days = 30
         return Response(
             {
+                **_analytics(days),
                 "revenue_total": totals["revenue"],
                 "orders_total": totals["count"],
                 "revenue_30d": last_30["revenue"],

@@ -110,6 +110,30 @@ export interface AdminStats {
   low_stock: { product_id: number; product_name: string; variant_label: string; sku: string; stock: number }[]
   top_products: { id: number; name: string; sales_count: number }[]
   recent_orders: AdminOrder[]
+  period_days: number
+  period: PeriodTotals
+  previous: PeriodTotals
+  today: { orders: number; registrations: number; logins: number }
+  repeat_customer_rate: number
+  series: { date: string; revenue: number; orders: number }[]
+  by_category: { category: string; label: string; revenue: number; quantity: number }[]
+  by_payment: Breakdown[]
+  by_shipping: Breakdown[]
+  by_status: { key: Order['status']; label: string; count: number }[]
+}
+
+export interface PeriodTotals {
+  revenue: number
+  orders: number
+  average_basket: number
+  customers_new: number
+}
+
+export interface Breakdown {
+  key: string
+  label: string
+  orders: number
+  revenue: number
 }
 
 export const ORDER_STATUSES: { value: Order['status']; label: string }[] = [
