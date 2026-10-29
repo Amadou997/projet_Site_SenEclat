@@ -16,5 +16,230 @@
   "short_description": "10 bobines anti-moustiques à base d'extraits naturels de citronnelle, avec support métallique.",
   "description": "10 bobines anti-moustiques à base d'extraits naturels de citronnelle, avec support métallique.",
   "image": "products/photos/bobines-citronnelle-x10.webp"
+ },
+ {
+  "reference": "1227/54P45213",
+  "slug": "manche-en-aluminium-140-m",
+  "name": "Rouleau d'aluminium 1,40 pouce",
+  "category": "nettoyage",
+  "short_description": "Ruban aluminium haute résistance : supporte les températures élevées, isolation thermique, usage industriel et professionnel.",
+  "description": "Ruban aluminium haute résistance : supporte les températures élevées, isolation thermique, usage industriel et professionnel.\n\nRéférence fournisseur : 1227/54P45213\nCode-barres (EAN) : 8437009731178",
+  "image": "products/photos/rouleau-aluminium-1-40.webp"
+ },
+ {
+  "reference": "1240/6004",
+  "slug": "tabouret-en-fer-bruxelles-2-marches",
+  "name": "Tabouret en fer Bruxelles 2 places",
+  "category": "nettoyage",
+  "short_description": "Banc d'attente 2 places en fer noir, assise et dossier perforés, structure robuste et durable.",
+  "description": "Banc d'attente 2 places en fer noir, assise et dossier perforés, structure robuste et durable.\n\nRéférence fournisseur : 1240/6004\nCode-barres (EAN) : 8430114060041",
+  "image": "products/photos/tabouret-fer-bruxelles-2p.webp"
+ },
+ {
+  "reference": "1240/6007",
+  "slug": "tabouret-en-fer-munich-3-marches",
+  "name": "Tabouret en fer Munich 3 places",
+  "category": "nettoyage",
+  "short_description": "Banc d'attente 3 places en acier chromé perforé avec accoudoirs, grande résistance.",
+  "description": "Banc d'attente 3 places en acier chromé perforé avec accoudoirs, grande résistance.\n\nRéférence fournisseur : 1240/6007\nCode-barres (EAN) : 8430114060072",
+  "image": "products/photos/tabouret-fer-munich-3p.webp"
+ },
+ {
+  "reference": "1221/03330",
+  "slug": "film-alimentaire-lot-de-3-x-800-g",
+  "name": "Film alimentaire Bob lot de 3 x 800 g",
+  "category": "nettoyage",
+  "short_description": "Film alimentaire qualité professionnelle : conserve la fraîcheur, résistant, compatible réfrigérateur et congélateur.",
+  "description": "Film alimentaire qualité professionnelle : conserve la fraîcheur, résistant, compatible réfrigérateur et congélateur.\n\nRéférence fournisseur : 1221/03330\nCode-barres (EAN) : 8436021362544",
+  "image": "products/photos/bob-film-alimentaire-3x800g.webp"
+ },
+ {
+  "reference": "1261/024896",
+  "slug": "parasol-haute-qualite-130x60-cm",
+  "name": "Parasol haute qualité 130x60 cm",
+  "category": "nettoyage",
+  "short_description": "Parasol 130 x 60 cm à manivelle, toile imperméable et anti-UV, structure robuste, pied lesté. Coloris : rouge, beige, bleu, vert, gris.",
+  "description": "Parasol 130 x 60 cm à manivelle, toile imperméable et anti-UV, structure robuste, pied lesté. Coloris : rouge, beige, bleu, vert, gris.\n\nRéférence fournisseur : 1261/024896\nCode-barres (EAN) : 8436580248969",
+  "image": "products/photos/parasol-130x60.webp"
+ },
+ {
+  "reference": "1261/024894",
+  "slug": "parasol-haute-qualite-150x70-cm",
+  "name": "Parasol haute qualité 150x70 cm",
+  "category": "nettoyage",
+  "short_description": "Parasol 150 x 70 cm à manivelle, toile imperméable et anti-UV, structure robuste, pied lesté. Coloris : rouge, beige, bleu, vert, gris.",
+  "description": "Parasol 150 x 70 cm à manivelle, toile imperméable et anti-UV, structure robuste, pied lesté. Coloris : rouge, beige, bleu, vert, gris.\n\nRéférence fournisseur : 1261/024894\nCode-barres (EAN) : 8436580248945",
+  "image": "products/photos/parasol-150x70.webp"
+ },
+ {
+  "reference": "1261/024899",
+  "slug": "parasol-haute-qualite-170x80-cm",
+  "name": "Parasol haute qualité 170x80 cm",
+  "category": "nettoyage",
+  "short_description": "Parasol 170 x 80 cm à manivelle, toile imperméable et anti-UV, structure robuste, pied lesté. Coloris : rouge, beige, bleu, vert, gris.",
+  "description": "Parasol 170 x 80 cm à manivelle, toile imperméable et anti-UV, structure robuste, pied lesté. Coloris : rouge, beige, bleu, vert, gris.\n\nRéférence fournisseur : 1261/024899\nCode-barres (EAN) : 8436580248990",
+  "image": "products/photos/parasol-170x80.webp"
+ },
+ {
+  "reference": "1275/23007",
+  "slug": "parfum-caravan-femme-150-ml-n7",
+  "name": "Parfum Caravan femme 150 ml N°7",
+  "category": "beaute",
+  "short_description": "Eau de parfum Caravan N°7 pour femme, vaporisateur naturel 150 ml.",
+  "description": "Eau de parfum Caravan N°7 pour femme, vaporisateur naturel 150 ml.\n\nRéférence fournisseur : 1275/23007\nCode-barres (EAN) : 8424730004893",
+  "image": "products/photos/caravan-femme-n7-150ml.webp"
+ },
+ {
+  "reference": "1275/23009",
+  "slug": "parfum-caravan-femme-150-ml-n9",
+  "name": "Parfum Caravan femme 150 ml N°9",
+  "category": "beaute",
+  "short_description": "Eau de parfum Caravan N°9 pour femme, vaporisateur naturel 150 ml.",
+  "description": "Eau de parfum Caravan N°9 pour femme, vaporisateur naturel 150 ml.\n\nRéférence fournisseur : 1275/23009\nCode-barres (EAN) : 8424730004916",
+  "image": "products/photos/caravan-femme-n9-150ml.webp"
+ },
+ {
+  "reference": "1275/23014",
+  "slug": "parfum-caravan-homme-150-ml-n14",
+  "name": "Parfum Caravan homme 150 ml N°14",
+  "category": "beaute",
+  "short_description": "Eau de parfum Caravan N°14 pour homme, vaporisateur naturel 150 ml.",
+  "description": "Eau de parfum Caravan N°14 pour homme, vaporisateur naturel 150 ml.\n\nRéférence fournisseur : 1275/23014\nCode-barres (EAN) : 8424730004961",
+  "image": "products/photos/caravan-homme-n14-150ml.webp"
+ },
+ {
+  "reference": "1275/23010",
+  "slug": "parfum-caravan-homme-150-ml-n70",
+  "name": "Parfum Caravan homme 150 ml N°70",
+  "category": "beaute",
+  "short_description": "Eau de parfum Caravan N°70 pour homme, vaporisateur naturel 150 ml.",
+  "description": "Eau de parfum Caravan N°70 pour homme, vaporisateur naturel 150 ml.\n\nRéférence fournisseur : 1275/23010\nCode-barres (EAN) : 8424730004923",
+  "image": "products/photos/caravan-homme-n70-150ml.webp"
+ },
+ {
+  "reference": "1275/23018",
+  "slug": "parfum-caravan-homme-150-ml-n18",
+  "name": "Parfum Caravan homme 150 ml N°18",
+  "category": "beaute",
+  "short_description": "Eau de parfum Caravan N°18 pour homme, vaporisateur naturel 150 ml.",
+  "description": "Eau de parfum Caravan N°18 pour homme, vaporisateur naturel 150 ml.\n\nRéférence fournisseur : 1275/23018\nCode-barres (EAN) : 8424730006934",
+  "image": "products/photos/caravan-homme-n18-150ml.webp"
+ },
+ {
+  "reference": "1275/23016",
+  "slug": "parfum-caravan-homme-150-ml-n16",
+  "name": "Parfum Caravan homme 150 ml N°16",
+  "category": "beaute",
+  "short_description": "Eau de parfum Caravan N°16 pour homme, vaporisateur naturel 150 ml.",
+  "description": "Eau de parfum Caravan N°16 pour homme, vaporisateur naturel 150 ml.\n\nRéférence fournisseur : 1275/23016\nCode-barres (EAN) : 8424730006910",
+  "image": "products/photos/caravan-homme-n16-150ml.webp"
+ },
+ {
+  "reference": "1240/6006",
+  "slug": "tabouret-en-fer-munich-2-marches",
+  "name": "Tabouret en fer Munich 2 places",
+  "category": "nettoyage",
+  "short_description": "Banc d'attente 2 places en acier chromé perforé avec accoudoirs, grande résistance.",
+  "description": "Banc d'attente 2 places en acier chromé perforé avec accoudoirs, grande résistance.\n\nRéférence fournisseur : 1240/6006\nCode-barres (EAN) : 8430114060065",
+  "image": "products/photos/tabouret-fer-munich-2p.webp"
+ },
+ {
+  "reference": "1240/6005",
+  "slug": "tabouret-en-fer-bruxelles-3-marches",
+  "name": "Tabouret en fer Bruxelles 3 places",
+  "category": "nettoyage",
+  "short_description": "Banc d'attente 3 places en fer noir, assise et dossier perforés, structure robuste et durable.",
+  "description": "Banc d'attente 3 places en fer noir, assise et dossier perforés, structure robuste et durable.\n\nRéférence fournisseur : 1240/6005\nCode-barres (EAN) : 8430114060058",
+  "image": "products/photos/tabouret-fer-bruxelles-3p.webp"
+ },
+ {
+  "reference": "1275/22629",
+  "slug": "coffret-parfum-caravan-n61-15030-ml",
+  "name": "Coffret parfum Caravan N°61 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°61 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°61 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22629\nCode-barres (EAN) : 8424730014434",
+  "image": "products/photos/caravan-coffret-n61.webp"
+ },
+ {
+  "reference": "1275/22625",
+  "slug": "coffret-parfum-caravan-n1-15030-ml",
+  "name": "Coffret parfum Caravan N°1 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°1 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°1 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22625\nCode-barres (EAN) : 8424730014427",
+  "image": "products/photos/caravan-coffret-n1.webp"
+ },
+ {
+  "reference": "1275/22627",
+  "slug": "coffret-parfum-caravan-n15-15030-ml",
+  "name": "Coffret parfum Caravan N°15 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°15 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°15 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22627\nCode-barres (EAN) : 8424730023085",
+  "image": "products/photos/caravan-coffret-n15.webp"
+ },
+ {
+  "reference": "1275/22643",
+  "slug": "coffret-parfum-caravan-n16-15030-ml",
+  "name": "Coffret parfum Caravan N°16 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°16 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°16 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22643\nCode-barres (EAN) : 8424730038812",
+  "image": "products/photos/caravan-coffret-n16.webp"
+ },
+ {
+  "reference": "1275/22642",
+  "slug": "coffret-parfum-caravan-n23-15030-ml",
+  "name": "Coffret parfum Caravan N°23 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°23 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°23 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22642\nCode-barres (EAN) : 8424730038805",
+  "image": "products/photos/caravan-coffret-n23.webp"
+ },
+ {
+  "reference": "1275/22626",
+  "slug": "coffret-parfum-caravan-n43-15030-ml",
+  "name": "Coffret parfum Caravan N°43 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°43 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°43 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22626\nCode-barres (EAN) : 8424730014410",
+  "image": "products/photos/caravan-coffret-n43.webp"
+ },
+ {
+  "reference": "1275/22640",
+  "slug": "coffret-parfum-caravan-n45-15030-ml",
+  "name": "Coffret parfum Caravan N°45 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°45 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°45 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22640\nCode-barres (EAN) : 8424730016728",
+  "image": "products/photos/caravan-coffret-n45.webp"
+ },
+ {
+  "reference": "1275/22628",
+  "slug": "coffret-parfum-caravan-n66-15030-ml",
+  "name": "Coffret parfum Caravan N°66 150+30 ml",
+  "category": "beaute",
+  "short_description": "Coffret duo Caravan N°66 : eau de parfum pour homme 150 ml + format voyage 30 ml.",
+  "description": "Coffret duo Caravan N°66 : eau de parfum pour homme 150 ml + format voyage 30 ml.\n\nRéférence fournisseur : 1275/22628\nCode-barres (EAN) : 8424730014441",
+  "image": "products/photos/caravan-coffret-n66.webp"
+ },
+ {
+  "reference": "1237/PTM104",
+  "slug": "set-de-3-poeles-a-frire",
+  "name": "Ensemble de 3 poêles à frire 20, 24 et 28 cm",
+  "category": "nettoyage",
+  "short_description": "Revêtement antiadhésif haute qualité, compatible tous feux (gaz, électrique, vitrocéramique), facile à nettoyer.",
+  "description": "Revêtement antiadhésif haute qualité, compatible tous feux (gaz, électrique, vitrocéramique), facile à nettoyer.\n\nRéférence fournisseur : 1237/PTM104\nCode-barres (EAN) : 2023111609120",
+  "image": "products/photos/ensemble-3-poeles-20-24-28.webp"
+ },
+ {
+  "reference": "SE/BALISE-120",
+  "slug": "balise-signalisation-120cm",
+  "name": "Balise de signalisation 120 cm",
+  "category": "nettoyage",
+  "short_description": "Balise rouge à bandes réfléchissantes sur base lestée remplissable, stable et résistante. Hauteur 120 cm.",
+  "description": "Balise rouge à bandes réfléchissantes sur base lestée remplissable, stable et résistante. Hauteur 120 cm.",
+  "image": "products/photos/balise-signalisation-120cm.webp"
  }
 ]
