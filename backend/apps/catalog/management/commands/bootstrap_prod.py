@@ -21,7 +21,7 @@ from django.core.management.base import BaseCommand
 from django.db.models import Q
 
 from apps.accounts.models import User
-from apps.catalog.models import Product
+from apps.catalog.models import Product, ProductVariant
 from apps.catalog.pruning import prune_catalogue
 
 
@@ -38,6 +38,7 @@ class Command(BaseCommand):
 
         self.add_products()
         self.apply_photos()
+        self.apply_default_prices()
 
         email = os.environ.get("ADMIN_EMAIL", "").strip()
         password = os.environ.get("ADMIN_PASSWORD", "")
@@ -58,6 +59,24 @@ class Command(BaseCommand):
             Product.objects.create(**entry)
             created += 1
         self.stdout.write(f"Produits ajoutés : {created}.")
+
+    def apply_default_prices(self):
+        path = settings.BASE_DIR / "fixtures" / "prix_defaut.json"
+        created = 0
+        for entry in json.loads(path.read_text(encoding="utf-8")):
+            # Un produit qui a déjà un format garde le prix saisi dans l'administration.
+            product = Product.objects.filter(reference=entry["reference"], variants__isnull=True).first()
+            if product is None:
+                continue
+            ProductVariant.objects.create(
+                product=product,
+                label=entry["label"],
+                sku=f"DEF-{entry['reference']}",
+                price=entry["price"],
+                stock=entry["stock"],
+            )
+            created += 1
+        self.stdout.write(f"Prix par défaut appliqués : {created}.")
 
     def apply_photos(self):
         path = settings.BASE_DIR / "fixtures" / "photos_produits.json"

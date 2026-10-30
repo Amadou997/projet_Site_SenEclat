@@ -158,6 +158,21 @@ def test_bootstrap_adds_new_products_once(db):
     assert Product.objects.filter(reference="654/24259E-GRIS").count() == 1
 
 
+def test_bootstrap_default_prices_keep_admin_prices(db):
+    from django.core.management import call_command
+
+    from apps.catalog.models import Product, ProductVariant
+
+    kept = Product.objects.create(slug="raid-maison", name="Raid", category="nettoyage", reference="5000204342611", short_description="x")
+    ProductVariant.objects.create(product=kept, label="400 ml", sku="ADMIN", price=9999, stock=1)
+    call_command("bootstrap_prod")
+    assert list(kept.variants.values_list("sku", "price")) == [("ADMIN", 9999)]
+    priced = Product.objects.get(reference="SE/KIRENE-1-5L").variants.get()
+    assert (priced.label, priced.price, priced.stock) == ("1,5 L", 500, 20)
+    call_command("bootstrap_prod")
+    assert Product.objects.get(reference="SE/KIRENE-1-5L").variants.count() == 1
+
+
 def test_prune_keeps_only_products_with_official_photo(db):
     from apps.catalog.models import Product
     from apps.catalog.pruning import prune_catalogue

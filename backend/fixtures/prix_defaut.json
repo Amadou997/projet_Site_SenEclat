@@ -1,0 +1,158 @@
+[
+ {
+  "reference": "601/0003181",
+  "label": "1250 ml",
+  "price": 3000,
+  "stock": 20
+ },
+ {
+  "reference": "461/CY-9023016",
+  "label": "21 cm",
+  "price": 1500,
+  "stock": 20
+ },
+ {
+  "reference": "461/QT-736960",
+  "label": "16 cm",
+  "price": 3000,
+  "stock": 20
+ },
+ {
+  "reference": "519/1310",
+  "label": "750 ml",
+  "price": 2500,
+  "stock": 20
+ },
+ {
+  "reference": "519/1152",
+  "label": "750 ml",
+  "price": 2500,
+  "stock": 20
+ },
+ {
+  "reference": "461/CY-9023032",
+  "label": "Lot de 4 - 25 cm",
+  "price": 5000,
+  "stock": 20
+ },
+ {
+  "reference": "468/6425-ANT",
+  "label": "25 L",
+  "price": 8500,
+  "stock": 20
+ },
+ {
+  "reference": "468/6425",
+  "label": "25 L",
+  "price": 8500,
+  "stock": 20
+ },
+ {
+  "reference": "468/6425B",
+  "label": "25 L",
+  "price": 8500,
+  "stock": 20
+ },
+ {
+  "reference": "468/8425-AZU",
+  "label": "25 L",
+  "price": 8500,
+  "stock": 20
+ },
+ {
+  "reference": "468/6448C-ECR",
+  "label": "30 + 18 L",
+  "price": 15000,
+  "stock": 20
+ },
+ {
+  "reference": "468/8425-ANT",
+  "label": "25 L",
+  "price": 8500,
+  "stock": 20
+ },
+ {
+  "reference": "468/8425-BLA",
+  "label": "25 L",
+  "price": 8500,
+  "stock": 20
+ },
+ {
+  "reference": "468/8425-PIS",
+  "label": "25 L",
+  "price": 8500,
+  "stock": 20
+ },
+ {
+  "reference": "5414916097507",
+  "label": "750 ml",
+  "price": 4500,
+  "stock": 20
+ },
+ {
+  "reference": "5000204342581",
+  "label": "400 ml",
+  "price": 3500,
+  "stock": 20
+ },
+ {
+  "reference": "5000204342611",
+  "label": "400 ml",
+  "price": 3500,
+  "stock": 20
+ },
+ {
+  "reference": "544/2020",
+  "label": "219 x 158 x 38 mm",
+  "price": 1000,
+  "stock": 20
+ },
+ {
+  "reference": "5054563101846",
+  "label": "75 ml",
+  "price": 3000,
+  "stock": 20
+ },
+ {
+  "reference": "5054563103260",
+  "label": "75 ml",
+  "price": 3000,
+  "stock": 20
+ },
+ {
+  "reference": "SE/KIRENE-1-5L",
+  "label": "1,5 L",
+  "price": 500,
+  "stock": 20
+ },
+ {
+  "reference": "495/A101250003",
+  "label": "250 ml",
+  "price": 3000,
+  "stock": 20
+ },
+ {
+  "reference": "461/QT-8890420",
+  "label": "3,3 + 1,1 L",
+  "price": 15000,
+  "stock": 20
+ },
+ {
+  "reference": "461/QT-708008V",
+  "label": "22 cm",
+  "price": 4500,
+  "stock": 20
+ },
+ {
+  "reference": "461/CY-9023070",
+  "label": "26 cm",
+  "price": 5000,
+  "stock": 20
+ },
+ {
+  "reference": "461/QT-8890431",
+  "label": "4,4 + 2,3 L",
+  "price": 18000,
+  "stock": 20
+ }
+]
