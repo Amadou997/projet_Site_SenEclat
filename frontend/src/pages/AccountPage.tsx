@@ -26,7 +26,7 @@ function AuthPanel() {
   const { login, register } = useAuth()
   const fromCheckout = useNextPath() === '/commande'
   const [tab, setTab] = useState<'login' | 'signup'>(fromCheckout ? 'signup' : 'login')
-  const [form, setForm] = useState({ first_name: '', last_name: '', identifier: '', password: '' })
+  const [form, setForm] = useState({ first_name: '', last_name: '', identifier: '', password: '', confirm: '' })
   const [error, setError] = useState<string | null>(null)
   const [pending, setPending] = useState(false)
   const isSignup = tab === 'signup'
@@ -34,6 +34,10 @@ function AuthPanel() {
   async function submit(event: FormEvent) {
     event.preventDefault()
     setError(null)
+    if (isSignup && form.password !== form.confirm) {
+      setError('Les deux mots de passe ne sont pas identiques.')
+      return
+    }
     setPending(true)
     try {
       if (isSignup) {
@@ -146,6 +150,31 @@ function AuthPanel() {
               onChange={set('password')}
             />
           </label>
+          <AnimatePresence initial={false}>
+            {isSignup && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <label className="field">
+                  Confirmer le mot de passe
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Saisissez-le une seconde fois"
+                    autoComplete="new-password"
+                    required
+                    minLength={8}
+                    maxLength={128}
+                    value={form.confirm}
+                    onChange={set('confirm')}
+                  />
+                </label>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <AnimatePresence>
             {error && (
               <motion.p
