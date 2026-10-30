@@ -233,3 +233,31 @@ def test_stats_series_and_breakdowns(admin_api, api, catalog):
     assert next(p for p in stats["by_payment"] if p["key"] == "wave")["orders"] == 2
     assert next(s for s in stats["by_shipping"] if s["key"] == "pickup")["orders"] == 2
     assert admin_api.get("/api/admin/stats/", {"days": "abc"}).json()["period_days"] == 30
+
+
+def test_admin_can_create_another_admin(admin_api, api):
+    from apps.accounts.models import User
+
+    url = "/api/admin/admins/"
+    payload = {"first_name": "Fatou", "last_name": "Sow", "email": "Fatou@Example.sn", "password": "Autre-Secret-9271!"}
+
+    # Réservé aux administrateurs : un client connecté ne peut pas s'en servir.
+    assert api.post(url, payload, format="json").status_code == 401
+    client = APIClient()
+    client.force_authenticate(User.objects.create_user(email="client@example.sn", password=PASSWORD, first_name="C", last_name="L"))
+    assert client.get(url).status_code == 403
+    assert client.post(url, payload, format="json").status_code == 403
+
+    assert admin_api.post(url, {**payload, "password": "12345678"}, format="json").status_code == 400
+    assert admin_api.post(url, {**payload, "email": ""}, format="json").status_code == 400
+    assert admin_api.post(url, {**payload, "email": "client@example.sn"}, format="json").status_code == 400
+
+    created = admin_api.post(url, payload, format="json")
+    assert created.status_code == 201
+    assert "password" not in created.json()
+    user = User.objects.get(email="fatou@example.sn")
+    assert user.is_staff and not user.is_superuser and user.check_password(payload["password"])
+
+    emails = [a["email"] for a in admin_api.get(url).json()["items"]]
+    assert "fatou@example.sn" in emails and "client@example.sn" not in emails
+    assert api.post("/api/auth/login/", {"identifier": "fatou@example.sn", "password": payload["password"]}, format="json").status_code == 200

@@ -11,11 +11,14 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
+from rest_framework.throttling import ScopedRateThrottle
 from rest_framework.views import APIView
 
 from apps.accounts.models import User
 from apps.backoffice.models import SiteSettings
 from apps.backoffice.serializers import (
+    AdminAccountCreateSerializer,
+    AdminAccountSerializer,
     AdminContactMessageSerializer,
     AdminCustomerSerializer,
     AdminOrderSerializer,
@@ -295,6 +298,20 @@ class AdminCustomerViewSet(
         if serializer.instance.pk == self.request.user.pk:
             raise ValidationError({"is_active": "Vous ne pouvez pas désactiver votre propre compte."})
         serializer.save()
+
+
+class AdminAccountViewSet(AdminMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+    serializer_class = AdminAccountSerializer
+    queryset = User.objects.filter(is_staff=True).order_by("-date_joined")
+    throttle_scope = "auth"
+
+    def get_throttles(self):
+        return [ScopedRateThrottle()] if self.action == "create" else super().get_throttles()
+
+    def create(self, request):
+        serializer = AdminAccountCreateSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        return Response(AdminAccountSerializer(serializer.save()).data, status=status.HTTP_201_CREATED)
 
 
 class AdminPromoCodeViewSet(AdminMixin, viewsets.ModelViewSet):

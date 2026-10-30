@@ -11,6 +11,7 @@ import {
   ReceiptIcon,
   SettingsIcon,
   TagIcon,
+  UserPlusIcon,
   UsersIcon,
   IconBadge,
 } from './AdminIcons'
@@ -20,9 +21,9 @@ import { Customers } from './Customers'
 import { Orders } from './Orders'
 import { Overview } from './Overview'
 import { Products } from './Products'
-import { Analytics, Messages, Password, Promos, Settings } from './SiteAdmin'
+import { Admins, Analytics, Messages, Password, Promos, Settings } from './SiteAdmin'
 
-export type AdminSection = 'overview' | 'products' | 'orders' | 'customers' | 'promos' | 'messages' | 'analytics' | 'settings' | 'password'
+export type AdminSection = 'overview' | 'products' | 'orders' | 'customers' | 'promos' | 'messages' | 'analytics' | 'settings' | 'admins' | 'password'
 
 const SECTIONS: { id: AdminSection; label: string; title: string; icon: (p: IconProps) => ReactElement }[] = [
   { id: 'overview', label: 'Vue d’ensemble', title: 'Vue d’ensemble', icon: DashboardIcon },
@@ -33,6 +34,7 @@ const SECTIONS: { id: AdminSection; label: string; title: string; icon: (p: Icon
   { id: 'messages', label: 'Messages', title: 'Messages de contact', icon: MailIcon },
   { id: 'analytics', label: 'Statistiques', title: 'Statistiques d’audience', icon: ChartIcon },
   { id: 'settings', label: 'Paramètres du site', title: 'Paramètres du site', icon: SettingsIcon },
+  { id: 'admins', label: 'Administrateurs', title: 'Administrateurs', icon: UserPlusIcon },
   { id: 'password', label: 'Mot de passe', title: 'Changer mon mot de passe', icon: LockIcon },
 ]
 
@@ -124,6 +126,7 @@ export default function AdminPage() {
               {current.id === 'messages' && <Messages />}
               {current.id === 'analytics' && <Analytics />}
               {current.id === 'settings' && <Settings />}
+              {current.id === 'admins' && <Admins />}
               {current.id === 'password' && <Password />}
             </motion.div>
           </AnimatePresence>

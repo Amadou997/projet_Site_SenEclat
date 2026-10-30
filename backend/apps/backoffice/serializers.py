@@ -5,6 +5,7 @@ from django.utils.text import slugify
 from rest_framework import serializers
 
 from apps.accounts.models import User
+from apps.accounts.serializers import RegisterSerializer
 from apps.backoffice.models import SiteSettings
 from apps.catalog.models import Product, ProductVariant
 from apps.contact.models import ContactMessage
@@ -188,6 +189,29 @@ class AdminCustomerSerializer(serializers.ModelSerializer):
             "last_order_at",
         ]
         read_only_fields = [f for f in fields if f != "is_active"]
+
+
+class AdminAccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "first_name", "last_name", "email", "is_active", "date_joined", "last_login"]
+        read_only_fields = fields
+
+
+class AdminAccountCreateSerializer(RegisterSerializer):
+    """Mêmes contrôles qu'une inscription ; l'e-mail est obligatoire pour un compte administrateur."""
+
+    email = serializers.EmailField()
+    phone = None
+
+    def create(self, validated_data):
+        return User.objects.create_user(
+            email=validated_data["email"],
+            password=validated_data["password"],
+            first_name=validated_data["first_name"],
+            last_name=validated_data["last_name"],
+            is_staff=True,
+        )
 
 
 # --- Administration du site ----------------------------------------------------------

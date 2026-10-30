@@ -1,5 +1,15 @@
 import type { CategorySlug, Order } from '../../lib/types'
 
+export interface AdminAccount {
+  id: number
+  first_name: string
+  last_name: string
+  email: string
+  is_active: boolean
+  date_joined: string
+  last_login: string | null
+}
+
 export interface Paginated<T> {
   items: T[]
   total: number

@@ -3,7 +3,7 @@ import { useAsync } from '../../hooks/useAsync'
 import { api, setAccessToken } from '../../lib/api'
 import { formatDate, formatPhone, formatPrice } from '../../lib/format'
 import { errorMessage, LoadState, Pager, Toolbar, useFlash } from './shared'
-import type { ContactMessage, Paginated, PromoCode, SiteSettings } from './types'
+import type { AdminAccount, ContactMessage, Paginated, PromoCode, SiteSettings } from './types'
 
 /* ------------------------------------------------------------------ */
 /* Paramètres de la boutique                                           */
@@ -98,6 +98,117 @@ function SettingsForm({ initial }: { initial: SiteSettings }) {
         </button>
       </div>
     </form>
+  )
+}
+
+const EMPTY_ADMIN = { first_name: '', last_name: '', email: '', password: '', confirm: '' }
+
+export function Admins() {
+  const { data, loading, error: loadError, reload } = useAsync(() => api.get<Paginated<AdminAccount>>('/admin/admins/', { query: { page_size: 100 } }), [])
+  const [form, setForm] = useState(EMPTY_ADMIN)
+  const [flash, setFlash] = useFlash()
+  const [error, setError] = useState<string | null>(null)
+  const [pending, setPending] = useState(false)
+
+  async function create(event: FormEvent) {
+    event.preventDefault()
+    setError(null)
+    if (form.password !== form.confirm) {
+      setError('Les deux mots de passe ne sont pas identiques.')
+      return
+    }
+    setPending(true)
+    try {
+      const { confirm: _confirm, ...payload } = form
+      const created = await api.post<AdminAccount>('/admin/admins/', payload)
+      setForm(EMPTY_ADMIN)
+      setFlash(`Administrateur ${created.first_name} ${created.last_name} créé. Il peut se connecter avec cet e-mail.`)
+      reload()
+    } catch (err) {
+      setError(errorMessage(err, 'Création impossible.'))
+    } finally {
+      setPending(false)
+    }
+  }
+
+  return (
+    <>
+      <form className="admin-card admin-form" onSubmit={create}>
+        <h2 className="h3">Ajouter un administrateur</h2>
+        <p className="muted">Ce compte aura accès à toute l’administration : commandes, clients, produits et réglages. Communiquez-lui le mot de passe de vive voix, puis demandez-lui de le changer dans « Mot de passe ».</p>
+        <div className="grid-2">
+          <label className="field">
+            Prénom
+            <input className="input" autoComplete="off" required maxLength={80} value={form.first_name} onChange={(e) => setForm({ ...form, first_name: e.target.value })} />
+          </label>
+          <label className="field">
+            Nom
+            <input className="input" autoComplete="off" required maxLength={80} value={form.last_name} onChange={(e) => setForm({ ...form, last_name: e.target.value })} />
+          </label>
+        </div>
+        <label className="field">
+          E-mail
+          <input className="input" type="email" autoComplete="off" required maxLength={254} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+        </label>
+        <div className="grid-2">
+          <label className="field">
+            <span>
+              Mot de passe <span className="field__hint">(8 caractères minimum, différent de l’e-mail et du nom)</span>
+            </span>
+            <input className="input" type="password" autoComplete="new-password" required minLength={8} maxLength={128} value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} />
+          </label>
+          <label className="field">
+            Confirmer le mot de passe
+            <input className="input" type="password" autoComplete="new-password" required minLength={8} maxLength={128} value={form.confirm} onChange={(e) => setForm({ ...form, confirm: e.target.value })} />
+          </label>
+        </div>
+        {flash && (
+          <p role="status" className="alert alert--success">
+            {flash}
+          </p>
+        )}
+        {error && (
+          <p role="alert" className="alert alert--error">
+            {error}
+          </p>
+        )}
+        <div>
+          <button type="submit" className="btn btn--primary" disabled={pending}>
+            {pending ? 'Création…' : 'Créer l’administrateur'}
+          </button>
+        </div>
+      </form>
+
+      {data ? (
+        <div className="admin-card admin-table-wrap">
+          <table className="table">
+            <caption className="sr-only">Comptes administrateurs</caption>
+            <thead>
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Créé le</th>
+                <th scope="col">Dernière connexion</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.items.map((a) => (
+                <tr key={a.id}>
+                  <td className="table__strong">
+                    {a.first_name} {a.last_name}
+                  </td>
+                  <td>{a.email}</td>
+                  <td>{formatDate(a.date_joined)}</td>
+                  <td>{a.last_login ? formatDate(a.last_login) : 'Jamais'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <LoadState loading={loading} error={loadError} onRetry={reload} />
+      )}
+    </>
   )
 }
 
