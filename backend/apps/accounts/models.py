@@ -40,6 +40,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     address_landmark = models.CharField("point de repère", max_length=200, blank=True)
 
     is_active = models.BooleanField(default=True)
+    password_changed_at = models.DateTimeField("mot de passe changé le", null=True, blank=True, editable=False)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
 

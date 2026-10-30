@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { useAsync } from '../../hooks/useAsync'
-import { api } from '../../lib/api'
+import { api, setAccessToken } from '../../lib/api'
 import { formatDate, formatPhone, formatPrice } from '../../lib/format'
 import { errorMessage, LoadState, Pager, Toolbar, useFlash } from './shared'
 import type { ContactMessage, Paginated, PromoCode, SiteSettings } from './types'
@@ -95,6 +95,95 @@ function SettingsForm({ initial }: { initial: SiteSettings }) {
       <div>
         <button type="submit" className="btn btn--primary" disabled={pending}>
           {pending ? 'Enregistrement…' : 'Enregistrer les paramètres'}
+        </button>
+      </div>
+    </form>
+  )
+}
+
+const EMPTY_PASSWORD = { current_password: '', new_password: '', confirm: '' }
+
+export function Password() {
+  const [form, setForm] = useState(EMPTY_PASSWORD)
+  const [flash, setFlash] = useFlash()
+  const [error, setError] = useState<string | null>(null)
+  const [pending, setPending] = useState(false)
+
+  async function save(event: FormEvent) {
+    event.preventDefault()
+    setError(null)
+    if (form.new_password !== form.confirm) {
+      setError('Les deux nouveaux mots de passe ne sont pas identiques.')
+      return
+    }
+    setPending(true)
+    try {
+      const session = await api.post<{ access: string }>('/auth/change-password/', {
+        current_password: form.current_password,
+        new_password: form.new_password,
+      })
+      setAccessToken(session.access)
+      setForm(EMPTY_PASSWORD)
+      setFlash('Mot de passe modifié. Vos autres appareils ont été déconnectés.')
+    } catch (err) {
+      setError(errorMessage(err, 'Modification impossible.'))
+    } finally {
+      setPending(false)
+    }
+  }
+
+  return (
+    <form className="admin-card admin-form" onSubmit={save}>
+      <label className="field">
+        Mot de passe actuel
+        <input
+          className="input"
+          type="password"
+          autoComplete="current-password"
+          required
+          value={form.current_password}
+          onChange={(e) => setForm({ ...form, current_password: e.target.value })}
+        />
+      </label>
+      <label className="field">
+        <span>
+          Nouveau mot de passe <span className="field__hint">(8 caractères minimum, différent de votre e-mail et de votre nom)</span>
+        </span>
+        <input
+          className="input"
+          type="password"
+          autoComplete="new-password"
+          minLength={8}
+          required
+          value={form.new_password}
+          onChange={(e) => setForm({ ...form, new_password: e.target.value })}
+        />
+      </label>
+      <label className="field">
+        Confirmer le nouveau mot de passe
+        <input
+          className="input"
+          type="password"
+          autoComplete="new-password"
+          minLength={8}
+          required
+          value={form.confirm}
+          onChange={(e) => setForm({ ...form, confirm: e.target.value })}
+        />
+      </label>
+      {flash && (
+        <p role="status" className="alert alert--success">
+          {flash}
+        </p>
+      )}
+      {error && (
+        <p role="alert" className="alert alert--error">
+          {error}
+        </p>
+      )}
+      <div>
+        <button type="submit" className="btn btn--primary" disabled={pending}>
+          {pending ? 'Modification…' : 'Changer le mot de passe'}
         </button>
       </div>
     </form>

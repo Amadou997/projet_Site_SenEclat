@@ -14,15 +14,15 @@ import {
   UsersIcon,
   IconBadge,
 } from './AdminIcons'
-import type { IconProps } from '../../components/Icons'
+import { LockIcon, type IconProps } from '../../components/Icons'
 import type { ReactElement } from 'react'
 import { Customers } from './Customers'
 import { Orders } from './Orders'
 import { Overview } from './Overview'
 import { Products } from './Products'
-import { Analytics, Messages, Promos, Settings } from './SiteAdmin'
+import { Analytics, Messages, Password, Promos, Settings } from './SiteAdmin'
 
-export type AdminSection = 'overview' | 'products' | 'orders' | 'customers' | 'promos' | 'messages' | 'analytics' | 'settings'
+export type AdminSection = 'overview' | 'products' | 'orders' | 'customers' | 'promos' | 'messages' | 'analytics' | 'settings' | 'password'
 
 const SECTIONS: { id: AdminSection; label: string; title: string; icon: (p: IconProps) => ReactElement }[] = [
   { id: 'overview', label: 'Vue d’ensemble', title: 'Vue d’ensemble', icon: DashboardIcon },
@@ -33,6 +33,7 @@ const SECTIONS: { id: AdminSection; label: string; title: string; icon: (p: Icon
   { id: 'messages', label: 'Messages', title: 'Messages de contact', icon: MailIcon },
   { id: 'analytics', label: 'Statistiques', title: 'Statistiques d’audience', icon: ChartIcon },
   { id: 'settings', label: 'Paramètres du site', title: 'Paramètres du site', icon: SettingsIcon },
+  { id: 'password', label: 'Mot de passe', title: 'Changer mon mot de passe', icon: LockIcon },
 ]
 
 export default function AdminPage() {
@@ -123,6 +124,7 @@ export default function AdminPage() {
               {current.id === 'messages' && <Messages />}
               {current.id === 'analytics' && <Analytics />}
               {current.id === 'settings' && <Settings />}
+              {current.id === 'password' && <Password />}
             </motion.div>
           </AnimatePresence>
         </div>

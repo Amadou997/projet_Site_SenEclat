@@ -65,6 +65,23 @@ class RegisterSerializer(serializers.Serializer):
         )
 
 
+class ChangePasswordSerializer(serializers.Serializer):
+    current_password = serializers.CharField(write_only=True, max_length=128, trim_whitespace=False)
+    new_password = serializers.CharField(write_only=True, max_length=128, trim_whitespace=False)
+
+    def validate_current_password(self, value):
+        if not self.context["request"].user.check_password(value):
+            raise serializers.ValidationError("Mot de passe actuel incorrect.")
+        return value
+
+    def validate_new_password(self, value):
+        try:
+            password_validation.validate_password(value, self.context["request"].user)
+        except Exception as exc:  # ValidationError de Django → erreur DRF
+            raise serializers.ValidationError(list(exc.messages)) from exc
+        return value
+
+
 class LoginSerializer(serializers.Serializer):
     identifier = serializers.CharField(max_length=254, help_text="E-mail ou téléphone")
     password = serializers.CharField(write_only=True, max_length=128, style={"input_type": "password"})

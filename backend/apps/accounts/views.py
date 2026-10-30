@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.utils import timezone
 from rest_framework import generics, permissions, status
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
@@ -9,7 +10,7 @@ from rest_framework_simplejwt.token_blacklist.models import BlacklistedToken
 from rest_framework_simplejwt.tokens import RefreshToken, UntypedToken
 
 from apps.accounts.models import User
-from apps.accounts.serializers import LoginSerializer, RegisterSerializer, UserSerializer
+from apps.accounts.serializers import ChangePasswordSerializer, LoginSerializer, RegisterSerializer, UserSerializer
 from apps.accounts.tokens import clear_refresh_cookie, issue_tokens, revoke_all_tokens, session_response
 
 
@@ -84,7 +85,10 @@ class RefreshView(AuthThrottleMixin, APIView):
             return
         jti = token.get("jti")
         if jti and BlacklistedToken.objects.filter(token__jti=jti).exists():  # …mais déjà consommé
-            revoke_all_tokens(token["user_id"])
+            # Un jeton antérieur au changement de mot de passe a été révoqué par celui-ci : ce n'est pas un vol.
+            changed_at = User.objects.filter(pk=token["user_id"]).values_list("password_changed_at", flat=True).first()
+            if changed_at is None or token["iat"] > changed_at.timestamp():
+                revoke_all_tokens(token["user_id"])
 
     @staticmethod
     def _fail(detail: str) -> Response:
@@ -107,6 +111,23 @@ class LogoutView(AuthThrottleMixin, APIView):
         response = Response(status=status.HTTP_204_NO_CONTENT)
         clear_refresh_cookie(response)
         return response
+
+
+class ChangePasswordView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "auth"
+
+    def post(self, request):
+        serializer = ChangePasswordSerializer(data=request.data, context={"request": request})
+        serializer.is_valid(raise_exception=True)
+        user = request.user
+        user.set_password(serializer.validated_data["new_password"])
+        user.password_changed_at = timezone.now()
+        user.save(update_fields=["password", "password_changed_at"])
+        # Les autres appareils sont déconnectés ; cette session repart avec un nouveau jeton.
+        revoke_all_tokens(user.id)
+        return session_response(user, issue_tokens(user))
 
 
 class MeView(generics.RetrieveUpdateAPIView):

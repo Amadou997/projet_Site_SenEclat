@@ -128,3 +128,29 @@ def test_login_is_rate_limited(api):
         api.post("/api/auth/login/", {"identifier": "x@y.sn", "password": "nope"}).status_code for _ in range(12)
     ]
     assert codes[-1] == 429
+
+
+def test_change_password_checks_current_and_revokes_other_sessions(api):
+    from rest_framework.test import APIClient
+
+    email = "awa@example.sn"
+    login = {"identifier": email, "password": PASSWORD}
+    api.post("/api/auth/register/", {"first_name": "Awa", "last_name": "Diop", "email": email, "password": PASSWORD}, format="json")
+    other = APIClient()
+    assert other.post("/api/auth/login/", login, format="json").status_code == 200
+    access = api.post("/api/auth/login/", login, format="json").json()["access"]
+    api.credentials(HTTP_AUTHORIZATION=f"Bearer {access}")
+    url = "/api/auth/change-password/"
+    new = "Autre-Secret-9271!"
+
+    assert api.post(url, {"current_password": "faux", "new_password": new}, format="json").status_code == 400
+    assert api.post(url, {"current_password": PASSWORD, "new_password": "12345678"}, format="json").status_code == 400
+    done = api.post(url, {"current_password": PASSWORD, "new_password": new}, format="json")
+    assert done.status_code == 200 and done.json()["access"] and "se_refresh" in done.cookies
+
+    assert other.post("/api/auth/refresh/", **AJAX).status_code == 401
+    assert api.post("/api/auth/refresh/", **AJAX).status_code == 200
+    fresh = APIClient()
+    assert fresh.post("/api/auth/login/", login, format="json").status_code == 401
+    assert fresh.post("/api/auth/login/", {"identifier": email, "password": new}, format="json").status_code == 200
+    assert APIClient().post(url, {"current_password": new, "new_password": PASSWORD}, format="json").status_code == 401
