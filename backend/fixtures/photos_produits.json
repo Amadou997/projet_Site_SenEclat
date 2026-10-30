@@ -485,9 +485,9 @@
  {
   "reference": "307/20721",
   "old_image": "products/221f38d5457342d8a9613501245bb1d0.png",
-  "image": "products/photos/asevi-brisa-400ml.webp",
-  "name": "Désodorisant Asevi Ambientador Brisa 400 ml",
-  "short_description": "Désodorisant d'ambiance en aérosol au parfum frais Brisa. Format : 400 ml."
+  "image": "products/photos/asevi-brisa-400ml-hd.webp",
+  "name": "Désodorisant Asevi Brisa 400 ml",
+  "short_description": "Désodorisant Asevi Brisa 400 ml : parfum d'ambiance à la fraîcheur longue durée."
  },
  {
   "reference": "307/20724",
@@ -499,9 +499,9 @@
  {
   "reference": "307/20722",
   "old_image": "products/9478d3f5cf454ca0a4c0e292186c4d82.png",
-  "image": "products/photos/asevi-primavera-400ml.webp",
-  "name": "Désodorisant Asevi Ambientador Primavera 400 ml",
-  "short_description": "Désodorisant d'ambiance en aérosol au parfum fleuri Primavera. Format : 400 ml."
+  "image": "products/photos/asevi-primavera-400ml-hd.webp",
+  "name": "Désodorisant Asevi Primavera 400 ml",
+  "short_description": "Désodorisant Asevi Primavera 400 ml : parfum d'ambiance à la fraîcheur longue durée."
  },
  {
   "reference": "2020/1302-052-24A",
@@ -940,16 +940,16 @@
  {
   "reference": "28/227",
   "old_image": "products/2711781be1a048c4b7e6b4e5ae37759e.png",
-  "image": "products/photos/qr-desodorisant-rose-floral.webp",
+  "image": "products/photos/desodorisant-qr-rose-floral-300ml.webp",
   "name": "Désodorisant QR rose florale",
-  "short_description": "Désodorisant d'ambiance QR parfum rose florale, neutralise les odeurs."
+  "short_description": "Désodorisant QR rose-floral 300 ml : neutralise les mauvaises odeurs et laisse un parfum frais. Idéal pour la maison, le bureau et la voiture."
  },
  {
   "reference": "28/11/CITRON/1",
   "old_image": "products/23e312da78d54e639cc54bb1cd01a77c.png",
-  "image": "products/photos/qr-desodorisant-lima-limon.webp",
-  "name": "Désodorisant QR Lima-Limón",
-  "short_description": "Désodorisant d'ambiance QR parfum citron vert, frais et tonifiant."
+  "image": "products/photos/desodorisant-qr-citron-vert-300ml.webp",
+  "name": "Désodorisant QR citron vert",
+  "short_description": "Désodorisant QR citron vert-citron 300 ml : neutralise les mauvaises odeurs et laisse un parfum frais. Idéal pour la maison, le bureau et la voiture."
  },
  {
   "reference": "8411047149102",
@@ -1129,9 +1129,9 @@
  {
   "reference": "2020/WR1008-1",
   "old_image": "products/c0e39466ad9d473b8fd39ae2c166fe36.png",
-  "image": "products/photos/sechoir-aluminium-el-miguelete.webp",
-  "name": "Séchoir à linge aluminium El Miguelete",
-  "short_description": "Séchoir à linge pliable en aluminium El Miguelete, léger et stable, avec ailes."
+  "image": "products/photos/corde-linge-miguelete-aluminium.webp",
+  "name": "Corde à linge murale rétractable Miguelete aluminium",
+  "short_description": "Corde à linge murale rétractable Miguelete, boîtier en aluminium : déroulement facile, fixation murale robuste, cordes résistantes. Pour maison, balcon ou jardin."
  },
  {
   "reference": "186/1194",
@@ -2175,5 +2175,180 @@
   "image": "products/photos/tulipan-negro-corps-coco-250ml.webp",
   "name": "Tulipán Negro brume corps coco 250 ml",
   "short_description": "Soin corps Tulipán Negro à la noix de coco, gommage exotique 250 ml : texture gourmande, peau douce et délicatement parfumée."
+ },
+ {
+  "reference": "3027/A3009002R",
+  "old_image": "products/ed8e9f70ee6c4c47a9f48949aba3c033.png",
+  "image": "products/photos/echelle-tabouret-aluminium-tl3.webp",
+  "name": "Échelle-tabouret en aluminium TL3 3 marches",
+  "short_description": "Échelle-tabouret pliante en aluminium, 3 marches larges antidérapantes, plateforme à 73 cm, charge maximale 150 kg, poignée de sécurité et verrouillage sécurisé."
+ },
+ {
+  "reference": "3027/A2000003R",
+  "old_image": "products/12de93b8b61542a290c865af4f688cd0.png",
+  "image": "products/photos/echelle-aluminium-3p.webp",
+  "name": "Échelle en aluminium 3P",
+  "short_description": "Échelle articulée en aluminium 3P, 3 positions : légère et robuste, charnières à verrouillage, pieds antidérapants, facile à ranger."
+ },
+ {
+  "reference": "3027/A2000004R",
+  "old_image": "products/5444addc231345d89ca54bf357dff21c.png",
+  "image": "products/photos/echelle-aluminium-4p.webp",
+  "name": "Échelle en aluminium 4P",
+  "short_description": "Échelle articulée en aluminium 4P, 4 positions : légère et robuste, charnières à verrouillage, pieds antidérapants, facile à ranger."
+ },
+ {
+  "reference": "3027/A2000005R",
+  "old_image": "products/637a9d89924b44a8ada0475941d09961.png",
+  "image": "products/photos/echelle-aluminium-5p.webp",
+  "name": "Échelle en aluminium 5P",
+  "short_description": "Échelle articulée en aluminium 5P, 5 positions : légère et robuste, charnières à verrouillage, pieds antidérapants, facile à ranger."
+ },
+ {
+  "reference": "3027/A2000006R",
+  "old_image": "products/39ffbcc0e78a4127a550061c1808155a.png",
+  "image": "products/photos/echelle-aluminium-6p.webp",
+  "name": "Échelle en aluminium 6P",
+  "short_description": "Échelle articulée en aluminium 6P, 6 positions : légère et robuste, charnières à verrouillage, pieds antidérapants, facile à ranger."
+ },
+ {
+  "reference": "3027/A2000007R",
+  "old_image": "products/0f28e284299b44bc928927c8141e6cc3.png",
+  "image": "products/photos/echelle-aluminium-7p.webp",
+  "name": "Échelle en aluminium 7P",
+  "short_description": "Échelle articulée en aluminium 7P, 7 positions : légère et robuste, charnières à verrouillage, pieds antidérapants, facile à ranger."
+ },
+ {
+  "reference": "3027/A2000008R",
+  "old_image": "products/b711fe54e9ef4eb594e0a68a30f03628.png",
+  "image": "products/photos/echelle-aluminium-8p.webp",
+  "name": "Échelle en aluminium 8P",
+  "short_description": "Échelle articulée en aluminium 8P, 8 positions : légère et robuste, charnières à verrouillage, pieds antidérapants, facile à ranger."
+ },
+ {
+  "reference": "2020/WR1001-1",
+  "old_image": "products/bb6b506b441547f5be8716a355dc336f.png",
+  "image": "products/photos/corde-linge-miguelete-blanc.webp",
+  "name": "Corde à linge murale rétractable Miguelete",
+  "short_description": "Corde à linge murale rétractable Miguelete, boîtier blanc : déroulement facile, fixation murale robuste, cordes résistantes. Pour maison, balcon ou jardin."
+ },
+ {
+  "reference": "2020/WR1008-1",
+  "old_image": "products/photos/sechoir-aluminium-el-miguelete.webp",
+  "image": "products/photos/corde-linge-miguelete-aluminium.webp",
+  "name": "Corde à linge murale rétractable Miguelete aluminium",
+  "short_description": "Corde à linge murale rétractable Miguelete, boîtier en aluminium : déroulement facile, fixation murale robuste, cordes résistantes. Pour maison, balcon ou jardin."
+ },
+ {
+  "reference": "2020/WR1001-1S",
+  "old_image": "products/a6875a23c9344a668cf2cda3bb4a2798.png",
+  "image": "products/photos/corde-linge-miguelete-argent.webp",
+  "name": "Corde à linge murale rétractable Miguelete argent",
+  "short_description": "Corde à linge murale rétractable Miguelete, boîtier argent : déroulement facile, fixation murale robuste, cordes résistantes. Pour maison, balcon ou jardin."
+ },
+ {
+  "reference": "2020/521-348-B",
+  "old_image": "products/309b105044ba4864b9ae04a1728eb7c0.png",
+  "image": "products/photos/tapis-bain-39x69-gris.webp",
+  "name": "Tapis de bain 39x69 cm 500 g (B)",
+  "short_description": "Tapis de bain 39 x 69 cm, 500 g, gris : texture douce et très absorbante, base antidérapante, lavable en machine."
+ },
+ {
+  "reference": "2020/521-348-A",
+  "old_image": "products/6debc5bacc544f5688349cac30047be8.png",
+  "image": "products/photos/tapis-bain-39x69-bleu.webp",
+  "name": "Tapis de bain 39x69 cm 500 g (A)",
+  "short_description": "Tapis de bain 39 x 69 cm, 500 g, bleu : texture douce et très absorbante, base antidérapante, lavable en machine."
+ },
+ {
+  "reference": "2020/521-350-C",
+  "old_image": "products/56f8440915e84045a3dabf7a4874007f.png",
+  "image": "products/photos/tapis-bain-34x64-beige.webp",
+  "name": "Tapis de bain 34x64 cm 300 g (C)",
+  "short_description": "Tapis de bain 34 x 64 cm, 300 g, beige : texture douce et très absorbante, base antidérapante, lavable en machine."
+ },
+ {
+  "reference": "2020/521-350-B",
+  "old_image": "products/439f670d0cfa462eb70c3b1435165264.png",
+  "image": "products/photos/tapis-bain-34x64-gris.webp",
+  "name": "Tapis de bain 34x64 cm 300 g (B)",
+  "short_description": "Tapis de bain 34 x 64 cm, 300 g, gris : texture douce et très absorbante, base antidérapante, lavable en machine."
+ },
+ {
+  "reference": "2020/521-350-01A",
+  "old_image": "products/6b0e4ea2ad7f48fc940ea78aa909e63b.png",
+  "image": "products/photos/tapis-bain-34x64-bleu.webp",
+  "name": "Tapis de bain 34x64 cm 300 g (01A)",
+  "short_description": "Tapis de bain 34 x 64 cm, 300 g, bleu : texture douce et très absorbante, base antidérapante, lavable en machine."
+ },
+ {
+  "reference": "275/380161",
+  "old_image": "products/75b7ef47d2244fac83397c0f8ae53ded.png",
+  "image": "products/photos/savon-lagarto-2-barres.webp",
+  "name": "Savon pur Lagarto 2 barres",
+  "short_description": "Savon de ménage pur en lot de 2 barres de 400 g : efficace contre les taches, respecte les textiles, biodégradable. Pour le lavage à la main et en machine."
+ },
+ {
+  "reference": "275/380141",
+  "old_image": "products/ed48d5317e764790b53b3e83a1d54ba6.png",
+  "image": "products/photos/savon-lagarto-1-barre-400g.webp",
+  "name": "Savon pur Lagarto 1 barre 400 g",
+  "short_description": "Savon de ménage pur en barre de 400 g : efficace contre les taches, respecte les textiles, biodégradable. Pour le lavage à la main et en machine."
+ },
+ {
+  "reference": "2020/414-503-M",
+  "old_image": "products/846d571d1f434e35b0bf2e77f3145d48.png",
+  "image": "products/photos/semelles-antibacteriennes-femme.webp",
+  "name": "Semelles antibactériennes femme",
+  "short_description": "Semelles antibactériennes multi-usages pour femme : limitent les odeurs, gardent les pieds au sec, amortissent les chocs. Découpables du 36 au 40."
+ },
+ {
+  "reference": "2020/414-550",
+  "old_image": "products/a11f0f7c29e2447f8549555ca601746b.png",
+  "image": "products/photos/semelles-latex-memoire-forme.webp",
+  "name": "Semelles latex à mémoire de forme",
+  "short_description": "Semelles en mousse latex à mémoire de forme : épousent le pied, réduisent la pression et les chocs, respirantes et durables. Découpables du 36 au 42."
+ },
+ {
+  "reference": "28/104",
+  "old_image": "products/8469672369bf41baa523c305d97b941b.png",
+  "image": "products/photos/desodorisant-qr-anti-tabac.webp",
+  "name": "Désodorisant anti-tabac QR",
+  "short_description": "Désodorisant anti-tabac QR 300 ml : neutralise les mauvaises odeurs et laisse un parfum frais. Idéal pour la maison, le bureau et la voiture."
+ },
+ {
+  "reference": "28/92750",
+  "old_image": "products/c6c6c995c3fa4a22addd9a1e367e4b6d.png",
+  "image": "products/photos/desodorisant-pr-anti-tabac.webp",
+  "name": "Désodorisant anti-tabac PR",
+  "short_description": "Désodorisant anti-tabac PR 300 ml : neutralise les mauvaises odeurs et laisse un parfum frais. Idéal pour la maison, le bureau et la voiture."
+ },
+ {
+  "reference": "28/11/CITRON/1",
+  "old_image": "products/photos/qr-desodorisant-lima-limon.webp",
+  "image": "products/photos/desodorisant-qr-citron-vert-300ml.webp",
+  "name": "Désodorisant QR citron vert",
+  "short_description": "Désodorisant QR citron vert-citron 300 ml : neutralise les mauvaises odeurs et laisse un parfum frais. Idéal pour la maison, le bureau et la voiture."
+ },
+ {
+  "reference": "28/227",
+  "old_image": "products/photos/qr-desodorisant-rose-floral.webp",
+  "image": "products/photos/desodorisant-qr-rose-floral-300ml.webp",
+  "name": "Désodorisant QR rose florale",
+  "short_description": "Désodorisant QR rose-floral 300 ml : neutralise les mauvaises odeurs et laisse un parfum frais. Idéal pour la maison, le bureau et la voiture."
+ },
+ {
+  "reference": "307/20721",
+  "old_image": "products/photos/asevi-brisa-400ml.webp",
+  "image": "products/photos/asevi-brisa-400ml-hd.webp",
+  "name": "Désodorisant Asevi Brisa 400 ml",
+  "short_description": "Désodorisant Asevi Brisa 400 ml : parfum d'ambiance à la fraîcheur longue durée."
+ },
+ {
+  "reference": "307/20722",
+  "old_image": "products/photos/asevi-primavera-400ml.webp",
+  "image": "products/photos/asevi-primavera-400ml-hd.webp",
+  "name": "Désodorisant Asevi Primavera 400 ml",
+  "short_description": "Désodorisant Asevi Primavera 400 ml : parfum d'ambiance à la fraîcheur longue durée."
  }
 ]
