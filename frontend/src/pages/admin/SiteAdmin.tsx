@@ -180,7 +180,7 @@ export function Admins() {
       </form>
 
       {data ? (
-        <div className="admin-card admin-table-wrap">
+        <div className="table-wrap">
           <table className="table">
             <caption className="sr-only">Comptes administrateurs</caption>
             <thead>
